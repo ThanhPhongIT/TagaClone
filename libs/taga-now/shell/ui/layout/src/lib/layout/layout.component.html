@@ -1,0 +1,12 @@
+<!-- <div class="col-span-1">
+  <tgn-top-bar></tgn-top-bar>
+</div> -->
+<div class="content_wrap col-span-1 w-full flex">
+  <tgn-navigation [expandedLv2]="expandedLv2"
+                  [expanded]="expanded"
+                  (manualToggle)="manualToggle()"
+                  (manualToggleLv2)="manualToggle2()"></tgn-navigation>
+  <div id="content">
+    <tgn-main-view></tgn-main-view>
+  </div>
+</div>

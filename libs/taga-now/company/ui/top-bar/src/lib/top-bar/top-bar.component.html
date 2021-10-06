@@ -1,0 +1,24 @@
+<ul class="menu_company"
+    nz-menu
+    [nzMode]="'horizontal'">
+    <li nz-menu-item
+        [nzMatchRouter]="true"
+        [nzMatchRouterExact]="false"
+        [routerLink]="['/company', 'info']"
+        (click)="routeTo('info')">Thông tin tổ chức</li>
+    <li nz-menu-item
+        [nzMatchRouter]="true"
+        [nzMatchRouterExact]="false"
+        [routerLink]="['/company', 'employee']"
+        (click)="routeTo('employee')">Nhân sự</li>
+    <li nz-menu-item
+        [nzMatchRouter]="true"
+        [nzMatchRouterExact]="false"
+        [routerLink]="['/company', 'project']"
+        (click)="routeTo('project')">Công việc</li>
+    <li nz-menu-item
+        [nzMatchRouter]="true"
+        [nzMatchRouterExact]="false"
+        [routerLink]="['/company', 'document']"
+        (click)="routeTo('document')">Danh mục tài liệu</li>
+</ul>

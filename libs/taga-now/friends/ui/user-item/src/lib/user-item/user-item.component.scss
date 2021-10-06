@@ -1,0 +1,74 @@
+.wrapper {
+    position: relative;
+    overflow: auto;
+}
+.banner-profile {
+    width: 100%;
+    height: 15rem;
+}
+:host {
+    height: 100vh;
+    position: relative;
+}
+
+.avatar {
+    @apply absolute;
+    top: 8rem;
+    left: 10rem;
+    width: 80%;
+    .infor {
+        @apply absolute;
+
+        top: 8.5rem;
+        left: 15rem;
+        white-space: nowrap;
+        .name {
+            letter-spacing: 0.0015em;
+        }
+    }
+}
+.content {
+    @apply mt-32;
+}
+.bdc {
+    width: 100%;
+    margin: 2rem auto;
+    background: #8c8c8c;
+    height: 1px;
+}
+.introduce {
+    .content {
+        @apply font-medium;
+        font-size: 15px;
+        line-height: 24px;
+        color: #595959;
+        margin-top: 0;
+    }
+    .title {
+        letter-spacing: 0.0015em;
+        color: #3366cc;
+    }
+}
+
+.title-right {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    /* identical to box height */
+
+    letter-spacing: 0.0015em;
+
+    /* Secondary/Grey 5 */
+
+    color: #595959;
+    margin: 1.5rem 0;
+}
+
+img {
+    width: 100%; /* or max-width: 100%; */
+    height: auto;
+}
+.button-user{
+    top: -7rem;
+    @apply flex absolute
+}

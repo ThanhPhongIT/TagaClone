@@ -1,0 +1,8 @@
+<!-- <p>layout works!</p> -->
+<ng-template #topBar>
+    <tgn-company-top-bar></tgn-company-top-bar>
+</ng-template>
+<ng-container *ngIf="!isActiveChild else topBar ">
+    <tgn-welcome></tgn-welcome>
+</ng-container>
+<router-outlet></router-outlet>

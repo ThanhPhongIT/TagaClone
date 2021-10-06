@@ -1,0 +1,9 @@
+{
+    "production": false,
+    "apiUrl": "http://localhost:8081",
+    "defaultLanguage": "en-US",
+    "supportedLanguages": ["en", "ja"],
+    "themeColors": "assets/theme/theme1/theme.json",
+    "apiImagesSource": "assets/theme/theme1/",
+    "themeColors2": "#FF00FF"
+  }

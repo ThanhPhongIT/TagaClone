@@ -1,0 +1,80 @@
+<div class="company-document">
+  <tgn-layout-button [listButton]="listButton" (callBack)="handle($event)">
+    <ng-template #layoutButtonContent>
+      <!-- <div class="pt-14"></div> -->
+        <nz-layout>
+          <nz-content class="list-doc">
+            <div class="table-view">
+              <div class="grid grid-cols-6 gap-4 pt-14">
+                <div class="col-span-3 head">Tên</div>
+                <div class="head">Người sở hữu</div>
+                <div class="head">Người chỉnh sửa</div>
+                <div class="head">Kích thước</div>
+              </div>
+            </div>
+            <div class="list-document">
+            <tgn-list-document [TREE_DATA]="TREE_DATA_PDF" (callBack)="handle_data($event)" [listButton]="listAction"></tgn-list-document>
+            <tgn-list-document [TREE_DATA]="TREE_DATA_WORD" (callBack)="handle_data($event)" [listButton]="listAction"></tgn-list-document>
+            <tgn-list-document [TREE_DATA]="TREE_DATA_CSV" (callBack)="handle_data($event)" [listButton]="listAction"></tgn-list-document>
+            </div>
+          </nz-content>
+          <nz-sider *ngIf="isSider">
+            <div class="head">
+              <div class="icon">
+                <svg-icon [key]="'iconPDF'" class="mr-2"></svg-icon>
+              </div>
+              <div class="name">Sản xuất áo dài tay
+                TagaNow</div>
+              <div class="edit">
+                <svg-icon [key]="'fix'"></svg-icon>
+              </div>
+              <div class="close" (click)="isSider = false">
+                <svg-icon [key]="'close'"></svg-icon>
+              </div>
+            </div>
+            <div class="content">
+              <div class="card-container">
+                <nz-tabset nzType="card" [nzSelectedIndex]="setIndextab">
+                  <nz-tab *ngFor="let tab of tabs" [nzTitle]="tab">
+                    <div *ngIf="tab==='Lịch sử'">
+                      <tgn-document-history [listButton]="listButtonHis"></tgn-document-history>
+                      <tgn-document-history [listButton]="listButtonHis"></tgn-document-history>
+                      <tgn-document-history [listButton]="listButtonHis"></tgn-document-history>
+                    </div>
+                    <div *ngIf="tab==='Thông tin'">
+                      <div class="line">
+                        <div class="cate">Loại File:</div>
+                        <div class="detail">PDF</div>
+                      </div>
+                      <div class="line">
+                        <div class="cate">Kích thước:</div>
+                        <div class="detail">11,570 KB</div>
+                      </div>
+                      <div class="line">
+                        <div class="cate">Người sở hữu:</div>
+                        <div class="detail">Nguyễn Thị Tuyết</div>
+                      </div>
+                      <div class="line">
+                        <div class="cate">Tải lên:</div>
+                        <div class="detail">17:24 24/03/2021</div>
+                      </div>
+                      <div class="line">
+                        <div class="cate">Chỉnh sửa:</div>
+                        <div class="detail">17:24 24/03/2021</div>
+                      </div>
+                      <div class="line">
+                        <div class="cate">Mô tả:</div>
+                        <div class="detail">
+                          <svg-icon [key]="'fix'"></svg-icon>
+                        </div>
+                      </div>
+                    </div>
+                  </nz-tab>
+                </nz-tabset>
+              </div>
+            </div>
+          </nz-sider>
+        </nz-layout>
+    </ng-template>
+  </tgn-layout-button>
+</div>

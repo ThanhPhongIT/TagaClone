@@ -1,0 +1,10 @@
+<nz-avatar-group>
+    <ng-container *ngFor="let item of userList; let i = index">
+        <nz-avatar nzIcon="user"
+                   [nzSrc]="item.MediaURL"></nz-avatar>
+
+        <nz-avatar *ngIf="i >= 4"
+                   style="background-color: #fde3cf; color: #f56a00"
+                   nzText="{{userList.length - i}}"></nz-avatar>
+    </ng-container>
+</nz-avatar-group>

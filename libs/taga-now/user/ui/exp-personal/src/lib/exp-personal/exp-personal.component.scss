@@ -1,0 +1,22 @@
+.title {
+  letter-spacing: 0.0015em;
+  color: #3366cc;
+}
+button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem 1.5rem;
+  width: 227px;
+  height: 40px;
+  background: #ffffff;
+  border: 1.25px solid #8c8c8c;
+  box-sizing: border-box;
+  border-radius: 1rem;
+  margin-top: 1.5rem;
+  margin: auto;
+  &:focus {
+    outline: none;
+  }
+}

@@ -1,0 +1,22 @@
+<div class="card-his">
+	<div class="left">
+		<div class="name">Sản xuất áo dài tay TagaNow</div>
+		<div class="des">Hiện tại - 17:24 24/03/2021</div>
+	</div>
+    <svg-icon [key]="'seemore'" class="seemore" nz-dropdown
+    nzTrigger="click"
+    [nzDropdownMenu]="menu"
+    [nzPlacement]="positionDropdown"></svg-icon>
+  </div>
+  <nz-dropdown-menu #menu="nzDropdownMenu">
+    <ul nz-menu>
+      <li
+        nz-menu-item
+        *ngFor="let button of listButton"
+        (click)="callBack.emit(button.name)"
+      >
+        <svg-icon [key]="button.svgKey" class="mr-2"></svg-icon>
+        {{ button.label }}
+      </li>
+    </ul>
+  </nz-dropdown-menu>

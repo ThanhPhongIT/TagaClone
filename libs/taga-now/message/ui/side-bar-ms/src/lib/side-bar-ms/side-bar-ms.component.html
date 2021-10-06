@@ -1,0 +1,74 @@
+<nz-collapse nzAccordion [nzBordered]="false">
+    <nz-collapse-panel [nzHeader]="panels[0].name" [nzActive]="panels[0].active" [ngStyle]="panels[0].customStyle">
+        <nz-list nzItemLayout="vertical" [nzLoading]="loading">
+            <nz-list-item *ngFor="let item of listMessageLive" class="p-0 border-none" >
+                <div class="list-item" (click)="showMessage(item.id)" [class.list-item-active]="active == item.id">
+                    <div class="item img">
+                        <img [src]="item.avatarIMG" alt="">
+                    </div>
+                    <div class="item-title">
+                        <div class="text">
+                            <div class="title-header">{{item.name}}</div>
+                            <div class="title-content">{{item.content | slice:0:20}}
+                                <span *ngIf="item.content.length > 20">...</span>
+                            </div>
+                        </div>
+                        <div class="item-noti">
+                            {{item.numberMessage}}
+                        </div>
+
+                    </div>
+
+                </div>
+            </nz-list-item>
+        </nz-list>
+    </nz-collapse-panel>
+    <nz-collapse-panel [nzHeader]="panels[1].name" [nzActive]="panels[1].active" [ngStyle]="panels[1].customStyle">
+        <nz-list nzItemLayout="vertical" [nzLoading]="loading">
+            <nz-list-item *ngFor="let item of listMessageGroup" class="p-0 border-none">
+                <div class="list-item" (click)="showMessage(item.id)" [class.list-item-active]="active == item.id">
+                    <div class="item img">
+                        <img [src]="item.avatarIMG" alt="">
+                    </div>
+                    <div class="item-title">
+                        <div class="text">
+                            <div class="title-header">{{item.name}}</div>
+                            <div class="title-content">{{item.content | slice:0:20}}
+                                <span *ngIf="item.content.length > 20">...</span>
+                            </div>
+                        </div>
+                        <div class="item-noti">
+                            {{item.numberMessage}}
+                        </div>
+
+                    </div>
+
+                </div>
+            </nz-list-item>
+        </nz-list>
+    </nz-collapse-panel>
+    <nz-collapse-panel [nzHeader]="panels[2].name" [nzActive]="panels[2].active" [ngStyle]="panels[2].customStyle">
+        <nz-list nzItemLayout="vertical" [nzLoading]="loading">
+            <nz-list-item *ngFor="let item of listMessageWork" class="p-0">
+                <div class="list-item" (click)="showMessage(item.id)" [class.list-item-active]="active == item.id">
+                    <div class="item img">
+                        <img [src]="item.avatarIMG" alt="">
+                    </div>
+                    <div class="item-title">
+                        <div class="text">
+                            <div class="title-header">{{item.name}}</div>
+                            <div class="title-content">{{item.content | slice:0:20}}
+                                <span *ngIf="item.content.length > 20">...</span>
+                            </div>
+                        </div>
+                        <div class="item-noti">
+                            {{item.numberMessage}}
+                        </div>
+
+                    </div>
+
+                </div>
+            </nz-list-item>
+        </nz-list>
+    </nz-collapse-panel>
+</nz-collapse>

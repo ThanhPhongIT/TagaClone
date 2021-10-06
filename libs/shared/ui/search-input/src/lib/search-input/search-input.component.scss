@@ -1,0 +1,6 @@
+.search {
+    @apply flex items-center p-3;
+    input {
+        @apply outline-none ml-2;
+    }
+}

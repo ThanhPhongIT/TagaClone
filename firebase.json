@@ -1,0 +1,16 @@
+{
+  "hosting": {
+    "public": "dist/apps/taga-now",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}

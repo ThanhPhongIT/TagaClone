@@ -1,0 +1,64 @@
+<nz-collapse nzGhost [nzExpandIconPosition]="'left'">
+  <ng-container *ngrxLet="companies$ as companies">
+    <nz-collapse-panel
+      *ngFor="let panel of companies"
+      [nzHeader]="expandIcon"
+      nzExpandedIcon
+    >
+      <ng-template #expandIcon>
+        <div class="grid grid-cols-4 gap-2">
+          <!-- <img class="img_logo col-span-1 self-center"
+                         [src]="panel.MediaURL || 'assets/logoCi.png'"
+                         alt=""> -->
+          <tgn-avatar [avtSize]="27" class="pr-3"> </tgn-avatar>
+
+          <p
+            [style.marginBottom]="0"
+            class="col-span-3 text-xs font-medium self-center"
+          >
+            {{ panel.Name }}
+          </p>
+        </div>
+      </ng-template>
+      <ul class="menu_company" nz-menu [nzMode]="'vertical'">
+        <li
+          nz-menu-item
+          [nzMatchRouter]="true"
+          [nzMatchRouterExact]="true"
+          [routerLink]="['/company', 'info', panel.CompanyId]"
+        >
+          Thông tin tổ chức
+        </li>
+        <li
+          nz-menu-item
+          [nzMatchRouter]="true"
+          [nzMatchRouterExact]="true"
+          [routerLink]="['/company', 'employee', panel.CompanyId]"
+        >
+          Nhân sự
+        </li>
+        <li
+          nz-menu-item
+          [nzMatchRouter]="true"
+          [nzMatchRouterExact]="true"
+          [routerLink]="['/company', 'project', panel.CompanyId]"
+        >
+          Công việc
+        </li>
+        <li
+          nz-menu-item
+          [nzMatchRouter]="true"
+          [nzMatchRouterExact]="true"
+          [routerLink]="['/company', 'document', panel.CompanyId]"
+        >
+          Danh mục tài liệu
+        </li>
+      </ul>
+    </nz-collapse-panel>
+  </ng-container>
+</nz-collapse>
+
+<div class="itemIcon" (click)="setNewCompany()">
+  <svg-icon [key]="'add'" color="#8c8c8c"></svg-icon>
+  <span>Thêm tổ chức</span>
+</div>

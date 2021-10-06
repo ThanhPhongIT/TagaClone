@@ -1,0 +1,268 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "esnext",
+    "lib": ["es2017", "dom"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@taga-now/shared/app-config": ["libs/shared/app-config/src/index.ts"],
+      "@taga-now/shared/assets": ["libs/shared/assets/src/index.ts"],
+      "@taga-now/shared/data-access/api": [
+        "libs/shared/data-access/api/src/index.ts"
+      ],
+      "@taga-now/shared/data-access/models": [
+        "libs/shared/data-access/models/src/index.ts"
+      ],
+      "@taga-now/shared/data-access/store": [
+        "libs/shared/data-access/store/src/index.ts"
+      ],
+      "@taga-now/shared/ui/avatar": ["libs/shared/ui/avatar/src/index.ts"],
+      "@taga-now/shared/ui/avatar-group": [
+        "libs/shared/ui/avatar-group/src/index.ts"
+      ],
+      "@taga-now/shared/ui/base-border-radius": [
+        "libs/shared/ui/base-border-radius/src/index.ts"
+      ],
+      "@taga-now/shared/ui/base-card-company": [
+        "libs/shared/ui/base-card-company/src/index.ts"
+      ],
+      "@taga-now/shared/ui/base-card-info": [
+        "libs/shared/ui/base-card-info/src/index.ts"
+      ],
+      "@taga-now/shared/ui/base-tree": [
+        "libs/shared/ui/base-tree/src/index.ts"
+      ],
+      "@taga-now/shared/ui/boxs-card": [
+        "libs/shared/ui/boxs-card/src/index.ts"
+      ],
+      "@taga-now/shared/ui/button": ["libs/shared/ui/button/src/index.ts"],
+      "@taga-now/shared/ui/icon": ["libs/shared/ui/icon/src/index.ts"],
+      "@taga-now/shared/ui/layout-button": [
+        "libs/shared/ui/layout-button/src/index.ts"
+      ],
+      "@taga-now/shared/ui/modal-layout": [
+        "libs/shared/ui/modal-layout/src/index.ts"
+      ],
+      "@taga-now/shared/ui/no-border-card": [
+        "libs/shared/ui/no-border-card/src/index.ts"
+      ],
+      "@taga-now/shared/ui/search-input": [
+        "libs/shared/ui/search-input/src/index.ts"
+      ],
+      "@taga-now/shared/ui/welcome": ["libs/shared/ui/welcome/src/index.ts"],
+      "@taga-now/taga-now/auth/feature": [
+        "libs/taga-now/auth/feature/src/index.ts"
+      ],
+      "@taga-now/taga-now/auth/ui/forgot-password": [
+        "libs/taga-now/auth/ui/forgot-password/src/index.ts"
+      ],
+      "@taga-now/taga-now/auth/ui/layout": [
+        "libs/taga-now/auth/ui/layout/src/index.ts"
+      ],
+      "@taga-now/taga-now/auth/ui/login": [
+        "libs/taga-now/auth/ui/login/src/index.ts"
+      ],
+      "@taga-now/taga-now/auth/ui/register": [
+        "libs/taga-now/auth/ui/register/src/index.ts"
+      ],
+      "@taga-now/taga-now/company/data-access": [
+        "libs/taga-now/company/data-access/src/index.ts"
+      ],
+      "@taga-now/taga-now/company/feature/company-document": [
+        "libs/taga-now/company/feature/company-document/src/index.ts"
+      ],
+      "@taga-now/taga-now/company/feature/company-employee": [
+        "libs/taga-now/company/feature/company-employee/src/index.ts"
+      ],
+      "@taga-now/taga-now/company/feature/company-info": [
+        "libs/taga-now/company/feature/company-info/src/index.ts"
+      ],
+      "@taga-now/taga-now/company/feature/company-project": [
+        "libs/taga-now/company/feature/company-project/src/index.ts"
+      ],
+      "@taga-now/taga-now/company/feature/shell": [
+        "libs/taga-now/company/feature/shell/src/index.ts"
+      ],
+      "@taga-now/taga-now/company/ui/add-employee-modal": [
+        "libs/taga-now/company/ui/add-employee-modal/src/index.ts"
+      ],
+      "@taga-now/taga-now/company/ui/checkbox": [
+        "libs/taga-now/company/ui/checkbox/src/index.ts"
+      ],
+      "@taga-now/taga-now/company/ui/company-side-bar": [
+        "libs/taga-now/company/ui/company-side-bar/src/index.ts"
+      ],
+      "@taga-now/taga-now/company/ui/document-history": [
+        "libs/taga-now/company/ui/document-history/src/index.ts"
+      ],
+      "@taga-now/taga-now/company/ui/edit-company-modal": [
+        "libs/taga-now/company/ui/edit-company-modal/src/index.ts"
+      ],
+      "@taga-now/taga-now/company/ui/layout": [
+        "libs/taga-now/company/ui/layout/src/index.ts"
+      ],
+      "@taga-now/taga-now/company/ui/list-document": [
+        "libs/taga-now/company/ui/list-document/src/index.ts"
+      ],
+      "@taga-now/taga-now/company/ui/pick-employee": [
+        "libs/taga-now/company/ui/pick-employee/src/index.ts"
+      ],
+      "@taga-now/taga-now/company/ui/related-work": [
+        "libs/taga-now/company/ui/related-work/src/index.ts"
+      ],
+      "@taga-now/taga-now/company/ui/top-bar": [
+        "libs/taga-now/company/ui/top-bar/src/index.ts"
+      ],
+      "@taga-now/taga-now/document/data-access": [
+        "libs/taga-now/document/data-access/src/index.ts"
+      ],
+      "@taga-now/taga-now/document/feature/shell": [
+        "libs/taga-now/document/feature/shell/src/index.ts"
+      ],
+      "@taga-now/taga-now/friends/data-access": [
+        "libs/taga-now/friends/data-access/src/index.ts"
+      ],
+      "@taga-now/taga-now/friends/feature/dashboard": [
+        "libs/taga-now/friends/feature/dashboard/src/index.ts"
+      ],
+      "@taga-now/taga-now/friends/feature/detail-profile": [
+        "libs/taga-now/friends/feature/detail-profile/src/index.ts"
+      ],
+      "@taga-now/taga-now/friends/feature/groups": [
+        "libs/taga-now/friends/feature/groups/src/index.ts"
+      ],
+      "@taga-now/taga-now/friends/feature/shell": [
+        "libs/taga-now/friends/feature/shell/src/index.ts"
+      ],
+      "@taga-now/taga-now/friends/ui/context-menu": [
+        "libs/taga-now/friends/ui/context-menu/src/index.ts"
+      ],
+      "@taga-now/taga-now/friends/ui/gr-card": [
+        "libs/taga-now/friends/ui/gr-card/src/index.ts"
+      ],
+      "@taga-now/taga-now/friends/ui/group-item": [
+        "libs/taga-now/friends/ui/group-item/src/index.ts"
+      ],
+      "@taga-now/taga-now/friends/ui/side-bar": [
+        "libs/taga-now/friends/ui/side-bar/src/index.ts"
+      ],
+      "@taga-now/taga-now/friends/ui/tab-bar": [
+        "libs/taga-now/friends/ui/tab-bar/src/index.ts"
+      ],
+      "@taga-now/taga-now/friends/ui/user-item": [
+        "libs/taga-now/friends/ui/user-item/src/index.ts"
+      ],
+      "@taga-now/taga-now/home": ["libs/taga-now/home/src/index.ts"],
+      "@taga-now/taga-now/home/data-access": [
+        "libs/taga-now/home/data-access/src/index.ts"
+      ],
+      "@taga-now/taga-now/home/feature": [
+        "libs/taga-now/home/feature/src/index.ts"
+      ],
+      "@taga-now/taga-now/home/ui/dashboard": [
+        "libs/taga-now/home/ui/dashboard/src/index.ts"
+      ],
+      "@taga-now/taga-now/message/data-access": [
+        "libs/taga-now/message/data-access/src/index.ts"
+      ],
+      "@taga-now/taga-now/message/feature": [
+        "libs/taga-now/message/feature/src/index.ts"
+      ],
+      "@taga-now/taga-now/message/feature/message-content": [
+        "libs/taga-now/message/feature/message-content/src/index.ts"
+      ],
+      "@taga-now/taga-now/message/feature/shell": [
+        "libs/taga-now/message/feature/shell/src/index.ts"
+      ],
+      "@taga-now/taga-now/message/ui/layout": [
+        "libs/taga-now/message/ui/layout/src/index.ts"
+      ],
+      "@taga-now/taga-now/message/ui/ms-main-body": [
+        "libs/taga-now/message/ui/ms-main-body/src/index.ts"
+      ],
+      "@taga-now/taga-now/message/ui/ms-main-header": [
+        "libs/taga-now/message/ui/ms-main-header/src/index.ts"
+      ],
+      "@taga-now/taga-now/message/ui/ms-sidebar-card": [
+        "libs/taga-now/message/ui/ms-sidebar-card/src/index.ts"
+      ],
+      "@taga-now/taga-now/message/ui/side-bar-ms": [
+        "libs/taga-now/message/ui/side-bar-ms/src/index.ts"
+      ],
+      "@taga-now/taga-now/shell/feature": [
+        "libs/taga-now/shell/feature/src/index.ts"
+      ],
+      "@taga-now/taga-now/shell/ui/layout": [
+        "libs/taga-now/shell/ui/layout/src/index.ts"
+      ],
+      "@taga-now/taga-now/shell/ui/logout-modal": [
+        "libs/taga-now/shell/ui/logout-modal/src/index.ts"
+      ],
+      "@taga-now/taga-now/shell/ui/main-view": [
+        "libs/taga-now/shell/ui/main-view/src/index.ts"
+      ],
+      "@taga-now/taga-now/shell/ui/nav-bar": [
+        "libs/taga-now/shell/ui/nav-bar/src/index.ts"
+      ],
+      "@taga-now/taga-now/shell/ui/navigation": [
+        "libs/taga-now/shell/ui/navigation/src/index.ts"
+      ],
+      "@taga-now/taga-now/shell/ui/resizer": [
+        "libs/taga-now/shell/ui/resizer/src/index.ts"
+      ],
+      "@taga-now/taga-now/shell/ui/side-bar": [
+        "libs/taga-now/shell/ui/side-bar/src/index.ts"
+      ],
+      "@taga-now/taga-now/shell/ui/top-bar": [
+        "libs/taga-now/shell/ui/top-bar/src/index.ts"
+      ],
+      "@taga-now/taga-now/shell/ui/user-dropdown": [
+        "libs/taga-now/shell/ui/user-dropdown/src/index.ts"
+      ],
+      "@taga-now/taga-now/tasks/data-access": [
+        "libs/taga-now/tasks/data-access/src/index.ts"
+      ],
+      "@taga-now/taga-now/tasks/feature/shell": [
+        "libs/taga-now/tasks/feature/shell/src/index.ts"
+      ],
+      "@taga-now/taga-now/tasks/ui/dashboard": [
+        "libs/taga-now/tasks/ui/dashboard/src/index.ts"
+      ],
+      "@taga-now/taga-now/user/data-access": [
+        "libs/taga-now/user/data-access/src/index.ts"
+      ],
+      "@taga-now/taga-now/user/feature/shell": [
+        "libs/taga-now/user/feature/shell/src/index.ts"
+      ],
+      "@taga-now/taga-now/user/ui/activities-personal": [
+        "libs/taga-now/user/ui/activities-personal/src/index.ts"
+      ],
+      "@taga-now/taga-now/user/ui/certificate-personal": [
+        "libs/taga-now/user/ui/certificate-personal/src/index.ts"
+      ],
+      "@taga-now/taga-now/user/ui/contact-personal": [
+        "libs/taga-now/user/ui/contact-personal/src/index.ts"
+      ],
+      "@taga-now/taga-now/user/ui/exp-personal": [
+        "libs/taga-now/user/ui/exp-personal/src/index.ts"
+      ],
+      "@taga-now/taga-now/user/ui/info-personal": [
+        "libs/taga-now/user/ui/info-personal/src/index.ts"
+      ],
+      "@taga-now/taga-now/user/ui/skill-personal": [
+        "libs/taga-now/user/ui/skill-personal/src/index.ts"
+      ]
+    }
+  },
+  "exclude": ["node_modules", "tmp"]
+}

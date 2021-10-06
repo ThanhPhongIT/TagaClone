@@ -1,0 +1,18 @@
+.heading {
+  .title {
+    letter-spacing: 0.0015em;
+    color: #3366cc;
+  }
+}
+.list {
+  .left {
+    .title {
+      @apply text-sm font-medium text-gray-500;
+      letter-spacing: 0.02em;
+    }
+  }
+  .right {
+    @apply text-base text-textSemiBlack font-medium;
+    letter-spacing: -0.03em;
+  }
+}

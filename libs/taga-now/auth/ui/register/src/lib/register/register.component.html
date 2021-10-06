@@ -1,0 +1,73 @@
+<div class="wrapper">
+	<div class="auth-layout">
+	  <div class="auth-layout-banner">
+		<img class="auth-layout-banner-img" src="assets/image/background-taganow.png" alt="">
+	  </div>
+	  <div class="auth-layout-content">
+		<div class="auth-layout-content-box">
+		  <form nz-form [formGroup]="registerForm" class="login-form">
+			<div class="auth-layout-content-img">
+			  <img  src="assets/svg/logo-login.svg" alt="">
+			</div>
+			<div class="auth-layout-content-text">
+			<img routerLink="/log-in" src="assets/svg/arrow-right.svg" alt="">
+			  <p>Đăng ký tài khoản</p>
+			</div>
+			<nz-form-item>
+			  <nz-form-control nzErrorTip="Please input your username!">
+				<nz-input-group [nzPrefix]="prefixTemplateUser">
+				  <input formControlName="Username" style="min-height: 30px;" nz-input placeholder="" />
+				</nz-input-group>
+				<ng-template #prefixTemplateUser>Email </ng-template>
+			  </nz-form-control>
+			</nz-form-item>
+			<nz-form-item>
+			  <nz-form-control nzErrorTip="Please input your Password!">
+				<nz-input-group [nzPrefix]="prefixTemplatePassword">
+				  <input formControlName="Password" nz-input style="min-height: 30px;" [type]="type" placeholder="" />
+				  <button class="show-hide" *ngIf="type == 'password'" (click)="type = 'text'">
+					<span class="material-icons">
+						visibility
+					</span>
+				</button>
+				<button class="show-hide" *ngIf="type !== 'password'" (click)="type = 'password'">
+					<span class="material-icons">
+						visibility_off
+					</span>
+				</button>
+				</nz-input-group>
+				<ng-template #prefixTemplatePassword>Password </ng-template>
+			  </nz-form-control>
+			</nz-form-item>
+			<nz-form-item>
+				<nz-form-control nzErrorTip="Please input your Password!">
+				  <nz-input-group [nzPrefix]="prefixTemplateConfirm">
+					<input formControlName="PasswordConfirm" nz-input style="min-height: 30px;" [type]="type_confirm" placeholder="" />
+					<button class="show-hide" *ngIf="type_confirm == 'password'" (click)="type_confirm = 'text'">
+					  <span class="material-icons">
+						  visibility
+					  </span>
+				  	</button>
+				  	<button class="show-hide" *ngIf="type_confirm !== 'password'" (click)="type_confirm = 'password'">
+					  <span class="material-icons">
+						  visibility_off
+					  </span>
+				  	</button>
+				  </nz-input-group>
+				  <ng-template #prefixTemplateConfirm>Confirm</ng-template>
+				</nz-form-control>
+			</nz-form-item>
+			<div nz-row class="grid grid-cols-2 gap-3">
+			  <div>
+				<!-- <label nz-checkbox formControlName="remember">
+				  <span>Ghi nhớ đăng nhập</span>
+				</label> -->
+			  </div>
+			</div>
+			<button (click)="register()" nz-button  class="login-form-button login-form-margin" >Đăng ký</button>
+		  </form>
+		</div>
+	  </div>
+	</div>
+  </div>
+  

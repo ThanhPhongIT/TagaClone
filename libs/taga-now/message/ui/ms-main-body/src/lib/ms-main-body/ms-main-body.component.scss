@@ -1,0 +1,143 @@
+// message
+/*Left*/
+.content {
+    min-height: calc(100% - 130px);
+    overflow-y: auto;
+}
+.content .answer.left {
+    padding: 0 0 0 58px;
+    text-align: left;
+    float: left;
+  }
+  .content .answer {
+    position: relative;
+    max-width: 600px;
+    overflow: hidden;
+    margin: 10px 0;
+    clear: both;
+  }
+  .content .line-date {
+    position: relative;
+    // overflow: hidden;
+    clear: both;
+    border-top: 1px solid #ebebeb;
+    width: 100%;
+    padding: 0px;
+    margin: 15px 0px;
+    .text {
+      position: absolute;
+      top: -10px;
+      background: #fafafa;
+      color: #8c8c8c;
+      padding: 3px 10px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+  .content .answer.left .avatar {
+    left: 0;
+  }
+  
+  .content .answer.left .avatar .status {
+    right: 4px;
+  }
+  .content .answer .avatar .status {
+    bottom: 0;
+  }
+  .content .answer.left {
+    .text {
+      background: #ffffff;
+      color: #595959;
+      border-radius: 0px 20px 20px;
+    }
+  
+    .avatar {
+      width: 52px;
+      height: 52px;
+      position: absolute;
+      img {
+        display: block;
+        border-radius: 35px;
+        height: 100%;
+      }
+    }
+  }
+  
+  .content .answer .text {
+    padding: 10px 15px;
+    font-size: 15px;
+    line-height: 26px;
+    position: relative;
+  }
+  .content .answer .img-file {
+    img {
+      border-radius: 10px;
+    }
+    .title {
+      margin-top: 10px;
+    }
+  }
+  .content .answer.left .time {
+    padding-left: 12px;
+    color: #333333;
+    float: right;
+    margin-right: 15px;
+  }
+  .content .answer .time {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 36px;
+    position: relative;
+    padding-bottom: 1px;
+  }
+  /*RIGHT*/
+  .content .answer.right {
+    padding: 0;
+    text-align: right;
+    float: right;
+  }
+  
+  .content .answer.right .text {
+    background: #256BF4;
+    color: #ffffff;
+    border-radius: 20px 0px 20px 20px;
+  }
+  
+  .content .answer.right .time {
+    padding-right: 12px;
+    color: #333333;
+    float: left;
+    margin-left: 15px;
+  }
+  
+  /**************ADD FORM ***************/
+  .answer-add {
+    clear: both;
+    // position: relative;
+    display: grid;
+    grid-template-columns: 50px 1fr 50px;
+    border-top: 1px solid #ebebeb;
+    padding-top: 20px;
+  }
+  .answer-add input {
+    border: none;
+    background: none;
+    display: block;
+    width: 100%;
+    font-size: 16px;
+    outline: none;
+    line-height: 20px;
+    padding: 0;
+    color: #8C8C8C;
+  }
+  .answer-add .answer-btn-1 {
+    background: 50% 50% no-repeat;
+  }
+  .answer-add .answer-btn {
+    display: block;
+    cursor: pointer;
+    min-height: 50px;
+  }
+  .answer-add .answer-btn-2 {
+    background: 50% 50% no-repeat;
+  }

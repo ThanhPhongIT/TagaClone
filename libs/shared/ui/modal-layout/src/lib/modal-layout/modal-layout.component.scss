@@ -1,0 +1,10 @@
+.modal-layout {
+    height: 100%;
+    position: relative;
+    .button {
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        @apply absolute;
+    }
+}

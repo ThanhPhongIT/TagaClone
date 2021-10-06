@@ -1,0 +1,23 @@
+nz-input-group {
+	margin-bottom: 8px;
+  }
+.ant-tree.ant-tree-directory .ant-tree-treenode{
+  padding: 10px 0;
+}
+.ant-dropdown-menu {
+  box-shadow: 0px 0px 8px -8px rgba(0, 0, 0, 0.08), 2px 2px 16px -2px rgba(23, 23, 23, 0.06);
+  border-radius: 16px;
+  width: 252px;
+  @apply bg-white p-4 mt-4;
+  .ant-dropdown-menu-item {
+      border-bottom: 1px solid #d9d9d9;
+      @apply py-3 flex items-center cursor-pointer;
+      &:last-child {
+          @apply border-none;
+      }
+  }
+}
+.line{
+  display: flex;
+  align-items: center;
+}

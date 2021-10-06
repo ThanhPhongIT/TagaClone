@@ -1,0 +1,18 @@
+<div class="sizer-wrap">
+  <div class="strip"></div>
+  <div class="sizer">
+    <div class="line">
+
+    </div>
+  </div>
+  <button class="btn"
+          [style.left]="expandedLv2 !== true && !expanded ? '30px': 'unset'">
+    <div class="overlay"></div>
+    <span class="flex justify-center cursor-pointer fill-current text-white flex-shrink-0 leading-none">
+      <svg-icon [key]="icon"
+                [size]="12"
+                class="icon text-textMedium">
+      </svg-icon>
+    </span>
+  </button>
+</div>

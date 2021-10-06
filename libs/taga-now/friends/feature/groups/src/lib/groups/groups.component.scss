@@ -1,0 +1,11 @@
+.group-friend {
+  @apply mx-6 mt-7;
+  .list {
+    @apply mb-4;
+  }
+}
+
+:host {
+  height: 100vh;
+  position: relative;
+}

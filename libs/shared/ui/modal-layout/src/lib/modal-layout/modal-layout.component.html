@@ -1,0 +1,12 @@
+<div class="modal-layout">
+  <div class="modal-header flex items-center">
+    <svg-icon [key]="svgIcon"></svg-icon>
+    <span class="title ml-3">
+      {{ title }}
+    </span>
+  </div>
+  <ng-container *ngTemplateOutlet="modalContent"></ng-container>
+  <span class="button">
+    <tgn-button [width]="'200px'" [type]="1">{{ buttonName }}</tgn-button>
+  </span>
+</div>

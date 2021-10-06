@@ -1,0 +1,33 @@
+.friends-sidebar {
+    // @apply pt-10;
+    .tab {
+        @apply flex;
+        .tab-button {
+            width: 120px;
+            height: 30px;
+            border-radius: 16px;
+            @apply outline-none font-semibold;
+        }
+        .active {
+            @apply bg-backgroundButtonBlue text-white;
+        }
+    }
+    .content {
+        .count-friends {
+            @apply py-4;
+        }
+        .list-friends {
+            .item {
+                border-radius: 24px;
+                cursor: pointer;
+                @apply p-2;
+                .name {
+                    @apply pl-2 text-textSemiBlack text-xs font-medium;
+                }
+            }
+            .activeFr {
+                background-color: #f5f5f5;
+            }
+        }
+    }
+}

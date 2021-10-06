@@ -1,0 +1,25 @@
+<div class="layout-button">
+  <button
+    class="btn-add flex items-center justify-center"
+    nz-dropdown
+    nzTrigger="click"
+    [nzDropdownMenu]="menu"
+    [nzPlacement]="positionDropdown"
+  >
+    Thêm
+    <svg-icon [key]="'addCompany'" class="ml-2"> </svg-icon>
+  </button>
+  <nz-dropdown-menu #menu="nzDropdownMenu">
+    <ul nz-menu>
+      <li
+        nz-menu-item
+        *ngFor="let button of listButton"
+        (click)="callBack.emit(button.name)"
+      >
+        <svg-icon [key]="button.svgKey" class="mr-2"></svg-icon>
+        {{ button.label }}
+      </li>
+    </ul>
+  </nz-dropdown-menu>
+  <ng-container *ngTemplateOutlet="layoutButtonContent"> </ng-container>
+</div>

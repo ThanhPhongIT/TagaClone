@@ -1,0 +1,55 @@
+.heading {
+  .title {
+    letter-spacing: 0.0015em;
+    color: #3366cc;
+  }
+}
+.content {
+  display: grid;
+  margin: 36px;
+}
+.head {
+  margin-top: 11rem;
+  margin-left: 4rem;
+  .title {
+    display: flex;
+    align-items: center;
+    p {
+      margin-right: 1rem;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 29px;
+      letter-spacing: 0.0015em;
+      margin-bottom: 0.5rem;
+    }
+  }
+  .des {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 22px;
+    /* identical to box height, or 150% */
+
+    /* Secondary/Grey 5 */
+
+    color: #8c8c8c;
+  }
+
+  color: #000000;
+}
+.personal {
+  margin-top: auto;
+}
+.list {
+  .left {
+    .title {
+      @apply text-sm font-medium text-gray-500;
+      letter-spacing: 0.02em;
+    }
+  }
+  .right {
+    @apply text-base text-textSemiBlack font-medium;
+    letter-spacing: -0.03em;
+  }
+}

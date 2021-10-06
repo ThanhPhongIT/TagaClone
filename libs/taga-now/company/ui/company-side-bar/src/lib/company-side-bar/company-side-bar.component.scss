@@ -1,0 +1,32 @@
+ul {
+  li {
+    &:hover {
+      color: rgb(51, 102, 204);
+    }
+    @apply col-span-2 text-xs font-medium;
+  }
+}
+.img_logo {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+svg-icon {
+  svg {
+    fill: #8c8c8c;
+  }
+}
+nz-icon{
+  top: 13px !important;
+}
+.itemIcon{
+    margin-left: 20px;
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    svg-icon{
+      margin-right: 10px;
+      
+    }
+}

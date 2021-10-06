@@ -1,0 +1,100 @@
+<aside class="navbarLeft" [style.width.px]="sidebarWidth">
+  <div class="navbarLeft-content">
+    <div
+      class="logoLink"
+      nz-tooltip
+      [nzTooltipTitle]="userName"
+      nzTooltipPlacement="right"
+      [routerLink]="['/users']"
+    >
+      <tgn-user-dropdown (userName)="userName = $event"></tgn-user-dropdown>
+    </div>
+
+    <ng-container *ngrxLet="navBarItems$ as sideBar">
+      <div
+        *ngFor="let item of sideBar"
+        class="item"
+        [style.padding-top]="item.path === '' ? 'var(--height-topbar)' : ''"
+        [routerLink]="[item.path]"
+        routerLinkActive="nav_active"
+        [routerLinkActiveOptions]="
+          item.path == '' ? { exact: true } : { exact: false }
+        "
+      >
+        <div
+          nz-tooltip
+          [nzTooltipTitle]="item.label"
+          nzTooltipPlacement="right"
+          class="itemIcon"
+        >
+          <svg-icon [key]="item.icon"></svg-icon>
+        </div>
+      </div>
+    </ng-container>
+
+    <div class="flex-auto"></div>
+    <!-- <div class="item"
+         *ngIf="authQuery.user$ | async as user">
+      <div nz-tooltip
+           [nzTooltipTitle]="user.name"
+           nzTooltipPlacement="right"
+           class="itemIcon">
+        <j-avatar class="flex"
+                  [avatarUrl]="user.avatarUrl"
+                  [size]="26">
+        </j-avatar>
+      </div>
+    </div> -->
+    <div class="item">
+      <a nz-popover nzPopoverPlacement="rightBottom" nzPopoverTrigger="click">
+        <div
+          nz-tooltip
+          nzTooltipTitle="Favorites"
+          nzTooltipPlacement="right"
+          class="itemIcon"
+        >
+          <svg-icon [key]="'star'"></svg-icon>
+        </div>
+      </a>
+    </div>
+    <div class="item" [style.padding-bottom.px]="5">
+      <a nz-popover nzPopoverPlacement="rightBottom" nzPopoverTrigger="click">
+        <div
+          nz-tooltip
+          nzTooltipTitle="Cài đặt"
+          nzTooltipPlacement="right"
+          class="itemIcon"
+        >
+          <svg-icon [key]="'setting'"></svg-icon>
+        </div>
+      </a>
+    </div>
+    <div class="item" [style.padding-bottom.px]="60" (click)="openLogoutModal()">
+      <a nz-popover nzPopoverPlacement="rightBottom" nzPopoverTrigger="click">
+        <div
+          nz-tooltip
+          nzTooltipTitle="Đăng xuất"
+          nzTooltipPlacement="right"
+          class="itemIcon"
+        >
+          <svg-icon [key]="'logout'"></svg-icon>
+        </div>
+      </a>
+    </div>
+  </div>
+</aside>
+<!-- 
+<nz-modal [(nzVisible)]="isVisible" [nzFooter]="null">
+  <ng-container *nzModalContent>
+    <div class="wrap">
+      <div class="close">
+        <svg-icon [key]="'close'" (click)="close()"></svg-icon>
+      </div>
+      <p>Bạn có muốn đăng xuất khỏi tài khoản?</p>
+      <div class="action">
+        <button class="cancel" (click)="close()">Hủy</button>
+        <button class="ok" (click)="logout()">Đồng ý</button>
+      </div>
+    </div>
+  </ng-container>
+</nz-modal> -->

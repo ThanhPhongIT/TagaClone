@@ -1,0 +1,23 @@
+#content {
+  flex: 1;
+  min-width: 0;
+  z-index: 0;
+  overflow: auto;
+  will-change: padding-left;
+  transition: padding-left 300ms cubic-bezier(0.2, 0, 0, 1) 0s;
+  min-height: 100%;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  grid-template-columns: auto 1fr;
+  grid-template-areas: 'nav-bar         main-view      ';
+}
+
+:host {
+  @apply grid grid-cols-1;
+}
+.content_wrap {
+  // height: calc(100% - 60px);
+}

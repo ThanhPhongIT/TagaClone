@@ -1,0 +1,292 @@
+{
+  "implicitDependencies": {
+    "angular.json": "*",
+    "package.json": {
+      "dependencies": "*",
+      "devDependencies": "*"
+    },
+    "tsconfig.base.json": "*",
+    "tslint.json": "*",
+    ".eslintrc.json": "*",
+    "nx.json": "*"
+  },
+  "affected": {
+    "defaultBase": "master"
+  },
+  "npmScope": "taga-now",
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "@nrwl/workspace/tasks-runners/default",
+      "options": {
+        "cacheableOperations": ["build", "lint", "test", "e2e"]
+      }
+    }
+  },
+  "projects": {
+    "shared-app-config": {
+      "tags": []
+    },
+    "shared-assets": {
+      "tags": []
+    },
+    "shared-data-access-api": {
+      "tags": []
+    },
+    "shared-data-access-models": {
+      "tags": []
+    },
+    "shared-data-access-store": {
+      "tags": []
+    },
+    "shared-ui-avatar": {
+      "tags": []
+    },
+    "shared-ui-avatar-group": {
+      "tags": []
+    },
+    "shared-ui-base-border-radius": {
+      "tags": []
+    },
+    "shared-ui-base-card-company": {
+      "tags": []
+    },
+    "shared-ui-base-card-info": {
+      "tags": []
+    },
+    "shared-ui-base-tree": {
+      "tags": []
+    },
+    "shared-ui-boxs-card": {
+      "tags": []
+    },
+    "shared-ui-button": {
+      "tags": []
+    },
+    "shared-ui-icon": {
+      "tags": []
+    },
+    "shared-ui-layout-button": {
+      "tags": []
+    },
+    "shared-ui-modal-layout": {
+      "tags": []
+    },
+    "shared-ui-no-border-card": {
+      "tags": []
+    },
+    "shared-ui-search-input": {
+      "tags": []
+    },
+    "shared-ui-welcome": {
+      "tags": []
+    },
+    "taga-now": {
+      "tags": []
+    },
+    "taga-now-auth-feature": {
+      "tags": []
+    },
+    "taga-now-auth-ui-forgot-password": {
+      "tags": []
+    },
+    "taga-now-auth-ui-layout": {
+      "tags": []
+    },
+    "taga-now-auth-ui-login": {
+      "tags": []
+    },
+    "taga-now-auth-ui-register": {
+      "tags": []
+    },
+    "taga-now-company-data-access": {
+      "tags": []
+    },
+    "taga-now-company-feature-company-document": {
+      "tags": []
+    },
+    "taga-now-company-feature-company-employee": {
+      "tags": []
+    },
+    "taga-now-company-feature-company-info": {
+      "tags": []
+    },
+    "taga-now-company-feature-company-project": {
+      "tags": []
+    },
+    "taga-now-company-feature-shell": {
+      "tags": []
+    },
+    "taga-now-company-ui-add-employee-modal": {
+      "tags": []
+    },
+    "taga-now-company-ui-checkbox": {
+      "tags": []
+    },
+    "taga-now-company-ui-company-side-bar": {
+      "tags": []
+    },
+    "taga-now-company-ui-document-history": {
+      "tags": []
+    },
+    "taga-now-company-ui-edit-company-modal": {
+      "tags": []
+    },
+    "taga-now-company-ui-layout": {
+      "tags": []
+    },
+    "taga-now-company-ui-list-document": {
+      "tags": []
+    },
+    "taga-now-company-ui-pick-employee": {
+      "tags": []
+    },
+    "taga-now-company-ui-related-work": {
+      "tags": []
+    },
+    "taga-now-company-ui-top-bar": {
+      "tags": []
+    },
+    "taga-now-document-data-access": {
+      "tags": []
+    },
+    "taga-now-document-feature-shell": {
+      "tags": []
+    },
+    "taga-now-e2e": {
+      "tags": [],
+      "implicitDependencies": ["taga-now"]
+    },
+    "taga-now-friends-data-access": {
+      "tags": []
+    },
+    "taga-now-friends-feature-dashboard": {
+      "tags": []
+    },
+    "taga-now-friends-feature-detail-profile": {
+      "tags": []
+    },
+    "taga-now-friends-feature-groups": {
+      "tags": []
+    },
+    "taga-now-friends-feature-shell": {
+      "tags": []
+    },
+    "taga-now-friends-ui-context-menu": {
+      "tags": []
+    },
+    "taga-now-friends-ui-gr-card": {
+      "tags": []
+    },
+    "taga-now-friends-ui-group-item": {
+      "tags": []
+    },
+    "taga-now-friends-ui-side-bar": {
+      "tags": []
+    },
+    "taga-now-friends-ui-tab-bar": {
+      "tags": []
+    },
+    "taga-now-friends-ui-user-item": {
+      "tags": []
+    },
+    "taga-now-home-data-access": {
+      "tags": []
+    },
+    "taga-now-home-feature": {
+      "tags": []
+    },
+    "taga-now-home-ui-dashboard": {
+      "tags": []
+    },
+    "taga-now-message-data-access": {
+      "tags": []
+    },
+    "taga-now-message-feature": {
+      "tags": []
+    },
+    "taga-now-message-feature-message-content": {
+      "tags": []
+    },
+    "taga-now-message-feature-shell": {
+      "tags": []
+    },
+    "taga-now-message-ui-layout": {
+      "tags": []
+    },
+    "taga-now-message-ui-ms-main-body": {
+      "tags": []
+    },
+    "taga-now-message-ui-ms-main-header": {
+      "tags": []
+    },
+    "taga-now-message-ui-ms-sidebar-card": {
+      "tags": []
+    },
+    "taga-now-message-ui-side-bar-ms": {
+      "tags": []
+    },
+    "taga-now-shell-feature": {
+      "tags": []
+    },
+    "taga-now-shell-ui-layout": {
+      "tags": []
+    },
+    "taga-now-shell-ui-logout-modal": {
+      "tags": []
+    },
+    "taga-now-shell-ui-main-view": {
+      "tags": []
+    },
+    "taga-now-shell-ui-nav-bar": {
+      "tags": []
+    },
+    "taga-now-shell-ui-navigation": {
+      "tags": []
+    },
+    "taga-now-shell-ui-resizer": {
+      "tags": []
+    },
+    "taga-now-shell-ui-side-bar": {
+      "tags": []
+    },
+    "taga-now-shell-ui-top-bar": {
+      "tags": []
+    },
+    "taga-now-shell-ui-user-dropdown": {
+      "tags": []
+    },
+    "taga-now-tasks-data-access": {
+      "tags": []
+    },
+    "taga-now-tasks-feature-shell": {
+      "tags": []
+    },
+    "taga-now-tasks-ui-dashboard": {
+      "tags": []
+    },
+    "taga-now-user-data-access": {
+      "tags": []
+    },
+    "taga-now-user-feature-shell": {
+      "tags": []
+    },
+    "taga-now-user-ui-activities-personal": {
+      "tags": []
+    },
+    "taga-now-user-ui-certificate-personal": {
+      "tags": []
+    },
+    "taga-now-user-ui-contact-personal": {
+      "tags": []
+    },
+    "taga-now-user-ui-exp-personal": {
+      "tags": []
+    },
+    "taga-now-user-ui-info-personal": {
+      "tags": []
+    },
+    "taga-now-user-ui-skill-personal": {
+      "tags": []
+    }
+  }
+}

@@ -1,0 +1,7 @@
+.welcome_area {
+  min-height: calc(100vh - 60px);
+  img {
+    width: 100%; /* or max-width: 100%; */
+    height: auto;
+  }
+}

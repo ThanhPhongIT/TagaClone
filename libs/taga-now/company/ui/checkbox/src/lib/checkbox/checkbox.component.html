@@ -1,0 +1,34 @@
+<div class="checkbox">
+  <div class="title">Thành viên</div>
+  <tgn-pick-employee
+    [listEmployee]="subList"
+    (callBack)="uncheck($event)"
+  ></tgn-pick-employee>
+  <form [formGroup]="formMovie">
+    <div formArrayName="checkboxes">
+      <ul class="list-checkbox">
+        <li *ngFor="let item of listEmployee; let i = index">
+          <input type="checkbox" formControlName="{{ i }}" [id]="item?.name" />
+          <label [for]="item?.name"
+            ><tgn-avatar [avtSize]="27" class="pr-3"> </tgn-avatar
+            >{{ item.name }}</label
+          >
+        </li>
+      </ul>
+    </div>
+  </form>
+  <!-- <tgn-base-border-radius>
+    <ng-template #content>
+      <div class="title" (click)="showRadioList = !showRadioList">
+        Hành chính nhân sự
+      </div>
+    </ng-template>
+  </tgn-base-border-radius>
+  <div class="radio-list" [class]="showRadioList ? 'show' : ''">
+    <nz-radio-group>
+      <label nz-radio nzValue="A">Option A</label>
+      <label nz-radio nzValue="B">Option B</label>
+      <label nz-radio nzValue="C">Option C</label>
+    </nz-radio-group>
+  </div> -->
+</div>

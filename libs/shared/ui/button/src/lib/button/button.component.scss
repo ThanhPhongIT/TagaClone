@@ -1,0 +1,15 @@
+.base-button{
+    height: 36px;
+    border-radius: 16px;
+    @apply font-semibold outline-none flex items-center justify-center;
+}
+.base-button.type-1{
+    @apply bg-backgroundButtonBlue text-white;
+}
+.base-button.type-2{
+    @apply bg-backgroundButtonGray text-backgroundButtonBlue;
+}
+.base-button.type-3{
+    // border: 1px solid;
+    @apply border-textTitleGrCard text-textTitleGrCard border-2;
+}

@@ -1,0 +1,45 @@
+<div class="contact">
+  <div
+    class="heading flex items-center justify-between mb-7 font-semibold text-base"
+  >
+    <div class="title">Liên hệ</div>
+    <div class="setting">
+      <svg-icon [key]="'fix'"></svg-icon>
+    </div>
+  </div>
+  <ul class="list w-full">
+    <li class="flex items-center justify-between w-full mb-6">
+      <div class="left flex items-center justify-start">
+        <div class="icon mr-2 flex items-center">
+          <svg-icon [key]="'phone'"></svg-icon>
+        </div>
+        <div class="title">Điện thoại:</div>
+      </div>
+      <div class="right">
+        {{ userDetail?.PhoneNumber }}
+      </div>
+    </li>
+    <li class="flex items-center justify-between w-full mb-6">
+      <div class="left flex items-center justify-start">
+        <div class="icon mr-2 flex items-center">
+          <svg-icon [key]="'email'"></svg-icon>
+        </div>
+        <div class="title">Email cá nhân:</div>
+      </div>
+      <div class="right">
+        {{ userDetail?.Email }}
+      </div>
+    </li>
+    <li class="flex items-center justify-between w-full mb-6">
+      <div class="left flex items-center justify-start">
+        <div class="icon mr-2 flex items-center itemIcon">
+          <svg-icon [key]="'link'"></svg-icon>
+        </div>
+        <div class="title">Link:</div>
+      </div>
+      <div class="right" style="color: #4674aa">
+        {{ userDetail?.Email }}
+      </div>
+    </li>
+  </ul>
+</div>

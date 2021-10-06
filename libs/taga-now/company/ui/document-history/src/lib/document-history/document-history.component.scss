@@ -1,0 +1,40 @@
+.card-his{
+	padding: 16px 20px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	.left{
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+	}
+	.name{
+		font-style: normal;
+		font-weight: 500;
+		font-size: 15px;
+		line-height: 23px;
+		letter-spacing: -0.03em;
+		color: #595959;
+		margin-bottom: 5px;
+	}
+	.des{
+		font-style: normal;
+		font-weight: 500;
+		font-size: 13px;
+		line-height: 16px;
+		color: #8C8C8C;
+
+	}
+}
+.ant-dropdown-menu {
+    box-shadow: 0px 0px 8px -8px rgba(0, 0, 0, 0.1), 2px 2px 16px -2px rgba(23, 23, 23, 0.1);
+    border-radius: 16px;
+    @apply bg-white p-4 mt-4;
+    .ant-dropdown-menu-item {
+        border-bottom: 1px solid #d9d9d9;
+        @apply py-3 flex items-center cursor-pointer;
+        &:last-child {
+            @apply border-none;
+        }
+    }
+}

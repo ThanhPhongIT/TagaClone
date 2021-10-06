@@ -1,0 +1,68 @@
+:host {
+  height: 100vh;
+  width: 100vw;
+  @apply flex justify-center items-center;
+}
+::ng-deep .ant-input-prefix {
+  min-width: 70px;
+}
+form {
+  @apply grid grid-cols-1 gap-4;
+}
+nz-input-group {
+  @apply rounded-full;
+}
+.text-blue {
+  color: #256bf4;
+  font-size: 13px;
+}
+.login-form-button {
+  border-radius: 25px;
+  background: #256bf4;
+  color: #fff;
+  min-height: 45px;
+}
+.auth-layout {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  .auth-layout-banner {
+    width: 50%;
+    height: 100vh;
+    background: #2059cb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    .auth-layout-banner-img {
+      height: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+  }
+  .auth-layout-content {
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .auth-layout-content-box {
+      min-width: 350px;
+      .auth-layout-content-img {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        p {
+          color: black;
+          font-weight: 600;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+.show-hide {
+  padding-top: 2px;
+}

@@ -1,0 +1,45 @@
+<div class="wrap">
+  <div class="close">
+    <svg-icon [key]="'close'" (click)="close()"></svg-icon>
+  </div>
+  <div class="title">
+    <svg-icon [key]="'fix'"></svg-icon>
+    <p>Chỉnh sửa</p>
+  </div>
+  <div class="input">
+    <p>Tên tổ chức</p>
+    <input nz-input />
+  </div>
+  <div class="input">
+    <p>Tên gọi khác</p>
+    <input nz-input />
+  </div>
+  <div class="input">
+    <p>Địa chỉ</p>
+    <input nz-input />
+  </div>
+  <div class="input">
+    <p>Mã số thuế:</p>
+    <input nz-input />
+  </div>
+  <div class="input">
+    <p>Người ĐDPL:</p>
+    <input nz-input />
+  </div>
+  <div class="input">
+    <p>Ngày hoạt động:</p>
+    <input nz-input />
+  </div>
+  <div class="input">
+    <p>Giấy phép kinh doanh:</p>
+    <input nz-input />
+  </div>
+  <div class="input">
+    <p>Lĩnh vực:</p>
+    <input nz-input />
+  </div>
+
+  <div class="action">
+    <button class="ok" (click)="confirm()">Xác nhận</button>
+  </div>
+</div>

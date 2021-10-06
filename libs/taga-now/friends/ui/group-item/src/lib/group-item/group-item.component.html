@@ -1,0 +1,15 @@
+<div class="group-item">
+  <p class="gr-name">
+    {{ grName }}
+  </p>
+  <div class="list-fr grid grid-cols-12 gap-6" *ngIf="listItem">
+    <div class="item col-span-6 xl:col-span-4" *ngFor="let item of listItem">
+      <tgn-gr-card
+        [isFriend]="item.isFriend"
+        [data]="item.data"
+        [haveGroup]="haveGroup"
+      >
+      </tgn-gr-card>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,17 @@
+<div class="radio-button">
+  <div class="title">Chọn nhóm: </div>
+  <tgn-base-border-radius>
+    <ng-template #content>
+      <div class="title" (click)="showRadioList = !showRadioList">
+        Hành chính nhân sự
+      </div>
+    </ng-template>
+  </tgn-base-border-radius>
+  <div class="radio-list" [class]="showRadioList ? 'show' : ''">
+    <nz-radio-group>
+      <label nz-radio nzValue="A">Option A</label>
+      <label nz-radio nzValue="B">Option B</label>
+      <label nz-radio nzValue="C">Option C</label>
+    </nz-radio-group>
+  </div>
+</div>

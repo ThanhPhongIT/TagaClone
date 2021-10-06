@@ -1,0 +1,23 @@
+<div class="pick-employee">
+  <tgn-base-border-radius [borderColor]="'rgba(140, 140, 140, 0.5)'">
+    <ng-template #content>
+      <div class="flex px-2 main flex-wrap">
+        <div
+          class="item flex items-center my-2"
+          *ngFor="let item of listEmployee; index as i"
+        >
+          <tgn-avatar [avtSize]="27"> </tgn-avatar>
+          <div class="name">{{ item?.name }}</div>
+          <span (click)="deleteIndex(i)" class="cursor-pointer mb-1">
+            <i
+              nz-icon
+              nzType="close-circle"
+              nzTheme="outline"
+              style="color: #8c8c8c"
+            ></i>
+          </span>
+        </div>
+      </div>
+    </ng-template>
+  </tgn-base-border-radius>
+</div>

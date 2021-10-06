@@ -1,0 +1,10 @@
+<div class="wrap">
+  <div class="close">
+    <svg-icon [key]="'close'" (click)="close()"></svg-icon>
+  </div>
+  <p>Bạn có muốn đăng xuất khỏi tài khoản?</p>
+  <div class="action">
+    <button class="cancel" (click)="close()">Hủy</button>
+    <button class="ok" (click)="logout()">Đồng ý</button>
+  </div>
+</div>

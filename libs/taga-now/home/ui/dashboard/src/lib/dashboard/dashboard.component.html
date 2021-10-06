@@ -1,0 +1,10 @@
+<div class="route_wrapper"
+     *ngIf="a else welcome">
+
+    <p *ngFor="let item of a">dashboard works!</p>
+</div>
+
+
+<ng-template #welcome>
+    <tgn-welcome></tgn-welcome>
+</ng-template>

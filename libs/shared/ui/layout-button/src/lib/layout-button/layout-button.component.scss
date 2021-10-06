@@ -1,0 +1,26 @@
+.layout-button {
+    position: relative;
+    .btn-add {
+        width: 125px;
+        height: 40px;
+        background: #f5f5f5;
+        border: 1px solid #256bf4;
+        border-radius: 30px;
+        top: 0;
+        right: 1rem;
+        color: #256bf4;
+        @apply top-0 absolute font-semibold text-sm outline-none;
+    }
+}
+.ant-dropdown-menu {
+    box-shadow: 0px 0px 8px -8px rgba(0, 0, 0, 0.08), 2px 2px 16px -2px rgba(23, 23, 23, 0.06);
+    border-radius: 16px;
+    @apply bg-white p-4 mt-4;
+    .ant-dropdown-menu-item {
+        border-bottom: 1px solid #d9d9d9;
+        @apply py-3 flex items-center cursor-pointer;
+        &:last-child {
+            @apply border-none;
+        }
+    }
+}

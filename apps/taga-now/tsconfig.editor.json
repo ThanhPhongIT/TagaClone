@@ -1,0 +1,7 @@
+{
+  "extends": "./tsconfig.json",
+  "include": ["**/*.ts", "../../libs/taga-now/auth/data-access/api/auth.service.ts"],
+  "compilerOptions": {
+    "types": ["jest", "node"]
+  }
+}

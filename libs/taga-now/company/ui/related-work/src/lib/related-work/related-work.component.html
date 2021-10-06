@@ -1,0 +1,22 @@
+<tgn-no-border-card class="mx-6">
+  <ng-template #cardContent>
+    <div class="related-work">
+      <div class="title text-textTitleBlue font-semibold mb-4">
+        Công việc liên quan
+      </div>
+    </div>
+    <div class="list-work">
+      <div
+        class="item grid grid-cols-2 gap-2 mt-3"
+        *ngFor="let item of [0, 1, 2]"
+      >
+        <div class="work-name flex items-center py-2">Viết API TagaNow</div>
+        <div class="staff flex items-center">
+          <tgn-avatar [avtSize]="24"> </tgn-avatar>
+          <span class="name ml-3"> Thái vũ </span>
+        </div>
+      </div>
+    </div>
+    
+  </ng-template>
+</tgn-no-border-card>

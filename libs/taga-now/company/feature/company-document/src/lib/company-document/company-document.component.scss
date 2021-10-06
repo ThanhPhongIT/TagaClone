@@ -1,0 +1,120 @@
+:host {
+    height: 100vh !important;
+    position: relative;
+}
+.company-document{
+	height: 100vh;
+	margin: 24px 36px;
+}
+.pt-14{
+	padding-top: 100px;
+	width: 100%;
+	border-bottom: 0.5px solid #BFBFBF;
+	padding-bottom: 16px;
+}
+.head{
+	font-style: normal;
+	font-weight: 500;
+	font-size: 15px;
+	line-height: 22px;
+	color: #595959;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+nz-layout{
+	background: none;
+}
+nz-sider{
+	margin-left: 15px;
+	margin-top: 100px;
+	height: 75vh;
+	max-width: 353px !important;
+	flex: none !important;
+	width: 353px !important;
+	background: #FFFFFF;
+	border: 0.25px solid #D9D9D9;
+	box-sizing: border-box;
+	border-radius: 18px;
+	padding: 30px;
+	.head{
+		.name{
+			font-family: Montserrat;
+			font-style: normal;
+			font-weight: 600;
+			font-size: 16px;
+			line-height: 20px;
+			letter-spacing: 0.0015em;
+			color: #333333;
+			padding: 0 10px;
+		}
+		.close{
+			padding-left: 25px;
+		}
+		
+	}
+	.content{
+		margin-top: 15px;
+	}
+}
+.card-container ::ng-deep p {
+	margin: 0;
+}
+.card-container ::ng-deep > .ant-tabs-card .ant-tabs-content {
+	height: 100%;
+	margin-top: -16px;
+}
+.card-container ::ng-deep > .ant-tabs-card .ant-tabs-content > .ant-tabs-tabpane {
+	background: #fff;
+	padding: 16px;
+}
+.card-container ::ng-deep > .ant-tabs-card > .ant-tabs-nav::before {
+	display: none;
+}
+.card-container ::ng-deep > .ant-tabs-card .ant-tabs-tab {
+	width: 140px;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+	border-color: transparent;
+	background: transparent;
+	transition: none !important;
+}
+.card-container ::ng-deep > .ant-tabs-card .ant-tabs-tab-active {
+	width: 140px;
+	height: 40px;
+	background: #256BF4 !important;
+	border-radius: 16px !important;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 15px;
+	line-height: 23px;
+	letter-spacing: -0.03em;
+	.ant-tabs-tab-btn{
+		color: #FFFFFF !important;
+	}
+	
+}
+
+.line{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-top: 24px;
+	.cate{
+		font-style: normal;
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 17px;
+		letter-spacing: 0.02em;
+		color: #8C8C8C;
+	}
+	.detail{
+		font-style: normal;
+		font-weight: 500;
+		font-size: 15px;
+		line-height: 23px;
+		letter-spacing: -0.03em;
+		color: #333333;
+	}
+}

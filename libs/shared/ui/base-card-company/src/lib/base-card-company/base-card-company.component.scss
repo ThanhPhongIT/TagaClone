@@ -1,0 +1,36 @@
+.logo {
+  width: 4rem;
+  height: 4rem;
+}
+.content {
+  .name {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    /* identical to box height */
+
+    letter-spacing: 0.0015em;
+
+    /* Primary/Black */
+
+    color: #171717;
+  }
+  .title {
+    margin-top: 10px;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 23px;
+    /* identical to box height, or 157% */
+
+    letter-spacing: -0.03em;
+
+    /* Primary/Black */
+
+    color: #171717;
+
+    opacity: 0.5;
+  }
+}
+.right {
+  cursor: pointer;
+}

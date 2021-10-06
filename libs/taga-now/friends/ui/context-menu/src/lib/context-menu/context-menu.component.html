@@ -1,0 +1,33 @@
+<div class="context-menu">
+  <ul class="menu-dropdown">
+    <li><svg-icon [key]="'delete'"></svg-icon> Xóa khỏi tổ chức</li>
+    <li><svg-icon [key]="'deleteGr'"></svg-icon>Xóa khỏi nhóm</li>
+    <li class="li-sub">
+      <svg-icon [key]="'moveGr'"></svg-icon>Chuyển nhóm
+      <ul class="sub-menu">
+        <li class="li-first-sub">
+          <tgn-base-border-radius [style.width]="'100%'">
+            <ng-template #content>
+              <div class="search">
+                <tgn-search-input> </tgn-search-input>
+              </div>
+            </ng-template>
+          </tgn-base-border-radius>
+        </li>
+        <nz-radio-group [(ngModel)]="radioValue">
+          <li><label nz-radio nzValue="A">Option A</label></li>
+          <li><label nz-radio nzValue="B">Option B</label></li>
+        </nz-radio-group>
+      </ul>
+    </li>
+    <li><svg-icon [key]="'keyGr'"></svg-icon>Hủy quyền chuyển nhóm</li>
+  </ul>
+</div>
+<!-- <nz-radio-group [(ngModel)]="radioValue">
+  <label nz-radio nzValue="A">Option A</label>
+  <label nz-radio nzValue="B">Option B</label>
+  <label nz-radio nzValue="C">Option C</label>
+  <label nz-radio nzValue="M"
+    >More... <input type="text" nz-input *ngIf="radioValue === 'M'"
+  /></label>
+</nz-radio-group> -->

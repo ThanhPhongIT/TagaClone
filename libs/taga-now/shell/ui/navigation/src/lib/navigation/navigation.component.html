@@ -1,0 +1,53 @@
+<div class="navigation">
+    <div class="flex flex-row overflow-hidden h-full">
+        <tgn-nav-bar [expanded]="expandedLv2"></tgn-nav-bar>
+        <tgn-side-bar [expanded]="expanded">
+            <ng-template #sidebarContent>
+                <ng-container *ngrxLet="sideBarType as type" [ngSwitch]="type">
+                    <ng-container *ngSwitchCase="sideType.home">
+                        this is home
+                        <!-- use a ng-container to group multiple root nodes -->
+                    </ng-container>
+                    <ng-container *ngSwitchCase="sideType.company">
+                        <tgn-company-side-bar></tgn-company-side-bar>
+                        <!-- use a ng-container to group multiple root nodes -->
+                    </ng-container>
+                    <ng-container *ngSwitchCase="sideType.document">
+                        this is document
+                        <!-- use a ng-container to group multiple root nodes -->
+                    </ng-container>
+                    <ng-container *ngSwitchCase="sideType.friends">
+                        <tgn-fr-side-bar></tgn-fr-side-bar>
+                    </ng-container>
+                    <ng-container *ngSwitchCase="sideType.task">
+                        this is task
+                        <!-- use a ng-container to group multiple root nodes -->
+                    </ng-container>
+                    <ng-container *ngSwitchCase="sideType.message">
+                        <tgn-side-bar-ms></tgn-side-bar-ms>
+                        <!-- use a ng-container to group multiple root nodes -->
+                    </ng-container>
+                    <ng-container *ngSwitchCase="sideType.user">
+                        this is user
+                        <!-- use a ng-container to group multiple root nodes -->
+                    </ng-container>
+                </ng-container>
+            </ng-template>
+        </tgn-side-bar>
+    </div>
+    <tgn-resizer (click)="toggle()" [expandedLv2]="expandedLv2" [expanded]="expanded"></tgn-resizer>
+    <div class="fixed logo bg-white">
+      <img width="81"
+           height="29"
+           class=""
+           src="assets/main-logo.svg"
+           alt="" />
+    </div>
+    <div class="fixed search">
+      <span class="material-icons">
+        search
+      </span>
+      <input type="text">
+
+    </div>
+</div>

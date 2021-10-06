@@ -1,0 +1,61 @@
+<div class="friends-sidebar">
+  <div class="tab">
+    <button
+      class="tab-button"
+      (click)="activeId = 1"
+      [class]="activeId == 1 ? 'active' : ''"
+    >
+      Tất cả
+    </button>
+    <button
+      class="tab-button"
+      (click)="activeId = 2"
+      [class]="activeId == 2 ? 'active' : ''"
+    >
+      Nhóm
+    </button>
+  </div>
+  <ng-container *ngIf="activeId == 1; else showGr">
+    <div class="content">
+      <p class="count-friends">8 liên hệ</p>
+
+      <ul class="list-friends">
+        <li
+          class="item"
+          *ngFor="let item of img"
+          [routerLink]="['/friends', 'detail', item.id]"
+          [routerLinkActive]="'activeFr'"
+        >
+          <tgn-avatar [avtText]="item.name" [icon]="item.icon" [style]="item.style"></tgn-avatar>
+          <span class="name">{{item.fullname}}</span>
+        </li>
+      </ul>
+      <!-- <div class="addGroup items-center flex ml-4 mt-4 cursor-pointer">
+        <svg-icon [key]="'addGroup'"></svg-icon>
+        <span class="ml-1">Thêm nhóm</span>
+      </div> -->
+    </div>
+  </ng-container>
+
+  <ng-template #showGr>
+    <div class="content">
+      <p class="count-friends">8 liên hệ</p>
+
+      <ul class="list-friends">
+        <li
+          class="item"
+          *ngFor="let item of [0, 1, 2, 3]"
+          [routerLink]="['/friends', 'groups', item]"
+          [routerLinkActive]="'activeFr'"
+        >
+          <tgn-avatar></tgn-avatar>
+          <span class="name">Nguyen Quang Anh</span>
+        </li>
+      </ul>
+      <div class="addGroup items-center flex ml-4 mt-4 cursor-pointer">
+        <svg-icon [key]="'addGroup'"></svg-icon>
+        <span class="ml-1">Thêm nhóm</span>
+      </div>
+    </div>
+  </ng-template>
+</div>

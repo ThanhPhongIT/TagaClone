@@ -1,0 +1,60 @@
+<nz-tree-view [nzTreeControl]="treeControl" [nzDataSource]="dataSource" [nzDirectoryTree]="true" nzClickHide="true">
+	<nz-tree-node *nzTreeNodeDef="let node" >
+	  <!-- <nz-tree-node-toggle nzTreeNodeNoopToggle></nz-tree-node-toggle> -->
+	  <nz-tree-node-option
+		[nzDisabled]="node.disabled"
+		[nzSelected]="selectListSelection.isSelected(node)"
+		(nzClick)="selectListSelection.toggle(node)"
+		nz-dropdown
+		nzTrigger="click"
+		[nzDropdownMenu]="menu"
+		[nzPlacement]="positionDropdown"
+	  >
+		<div class="grid grid-cols-6 gap-4 pt-14 ">
+			<div class="col-span-3 head line">
+				<svg-icon *ngIf="TREE_DATA[0].name === 'PDF'" [key]="'iconPDF'" class="mr-2"></svg-icon>
+				<svg-icon *ngIf="TREE_DATA[0].name === 'CSV'" [key]="'iconCSV'" class="mr-2"></svg-icon>
+				<svg-icon *ngIf="TREE_DATA[0].name === 'Word'" [key]="'iconCSV'" class="mr-2"></svg-icon>
+				{{ node.name }}
+			</div>
+			<div class="head">{{ node.owner }}</div>
+			<div class="head">{{ node.updateOn }}</div>
+			<div class="head">{{ node.size }}</div>
+		</div>
+	  </nz-tree-node-option>
+	</nz-tree-node>
+	<nz-tree-node *nzTreeNodeDef="let node; when: hasChild" class="flex">
+		<nz-tree-node-option
+		[nzDisabled]="node.disabled"
+		[nzSelected]="selectListSelection.isSelected(node)"
+		(nzClick)="selectListSelection.toggle(node)"
+		
+	  >
+	  <div class="grid grid-cols-6 gap-4 pt-14">
+		<div class="col-span-3 head">
+			
+			{{ node.name }}
+		</div>
+		<div class="head">{{ node.owner }}</div>
+		<div class="head">{{ node.updateOn }}</div>
+		<div class="head">{{ node.size }}</div>
+	  </div>
+	  </nz-tree-node-option>
+	  <nz-tree-node-toggle>
+	  	<i nz-icon nzType="down" nzTreeNodeToggleRotateIcon></i>
+	  </nz-tree-node-toggle>
+	</nz-tree-node>
+  </nz-tree-view>
+
+  <nz-dropdown-menu #menu="nzDropdownMenu">
+    <ul nz-menu>
+      <li
+        nz-menu-item
+        *ngFor="let button of listButton"
+        (click)="callBack.emit(button.name)"
+      >
+        <svg-icon [key]="button.svgKey" class="mr-2"></svg-icon>
+        {{ button.label }}
+      </li>
+    </ul>
+  </nz-dropdown-menu>

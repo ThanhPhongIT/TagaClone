@@ -1,0 +1,33 @@
+aside {
+  transition: width 300ms cubic-bezier(0.2, 0, 0, 1) 0s;
+}
+.navbarLeft-content {
+  @apply h-screen w-navbarLeft pb-5 flex flex-col bg-white flex-shrink-0;
+}
+
+.logoLink {
+  z-index: 11;
+  left: 14px;
+  top: 48px;
+  @apply fixed cursor-pointer pb-2 flex items-center justify-center;
+}
+
+.item {
+  @apply relative w-full flex items-center justify-center;
+  min-height: 42px;
+  .user-profile-photo {
+    width: 26px;
+  }
+}
+
+.itemIcon {
+  @apply w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 select-none transition-colors duration-100 cursor-pointer;
+}
+
+.itemIcon:hover {
+  @apply bg-white;
+}
+
+.about-popover {
+  max-width: 270px;
+}

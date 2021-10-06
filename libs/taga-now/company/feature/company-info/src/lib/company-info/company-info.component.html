@@ -1,0 +1,86 @@
+<div class="head">
+  <div class="title">
+    <p>Công Ty TNHH Tư Vấn Phần Mềm Đông Dương</p>
+    <!-- <div class="setting">
+      <svg-icon [key]="'fix'"></svg-icon>
+    </div> -->
+  </div>
+  <div class="des">Indochina Software Consult Company Limited</div>
+</div>
+<div class="content">
+  <tgn-no-border-card>
+    <ng-template #cardContent>
+      <div class="personal">
+        <div
+          class="heading flex items-center justify-between mb-7 font-semibold text-base"
+        >
+          <div class="title">Thông tin tổ chức</div>
+          <div class="setting" (click)="openEditModal()">
+            <svg-icon [key]="'fix'"></svg-icon>
+          </div>
+        </div>
+        <ul class="list w-full">
+          <li class="flex items-center justify-between w-full mb-6">
+            <div class="left flex items-center justify-start">
+              <div class="icon mr-2 flex items-center">
+                <svg-icon [key]="'location'"></svg-icon>
+              </div>
+              <div class="title">Địa chỉ:</div>
+            </div>
+            <div class="right">
+              Số 1 Ngách 5 Ngõ 105 Đường An Dương Vương, Phường Phú Thượng, Quận
+              Tây Hồ, Thành phố Hà Nội
+            </div>
+          </li>
+          <li class="flex items-center justify-between w-full mb-6">
+            <div class="left flex items-center justify-start">
+              <div class="icon mr-2 flex items-center">
+                <svg-icon [key]="'department'"></svg-icon>
+              </div>
+              <div class="title">Mã số thuế:</div>
+            </div>
+            <div class="right">0314654148</div>
+          </li>
+          <li class="flex items-center justify-between w-full mb-6">
+            <div class="left flex items-center justify-start">
+              <div class="icon mr-2 flex items-center itemIcon">
+                <svg-icon [key]="'package'"></svg-icon>
+              </div>
+              <div class="title">Người ĐDPL:</div>
+            </div>
+            <div class="right">Nguyễn Anh Tuấn</div>
+          </li>
+          <li class="flex items-center justify-between w-full mb-6">
+            <div class="left flex items-center justify-start">
+              <div class="icon mr-2 flex items-center itemIcon">
+                <svg-icon [key]="'dateIcon'"></svg-icon>
+              </div>
+              <div class="title">Ngày hoạt động:</div>
+            </div>
+            <div class="right">02/10/2017</div>
+          </li>
+          <li class="flex items-center justify-between w-full mb-6">
+            <div class="left flex items-center justify-start">
+              <div class="icon mr-2 flex items-center itemIcon">
+                <svg-icon [key]="'companyInfo'"></svg-icon>
+              </div>
+              <div class="title">Giấy phép kinh doanh:</div>
+            </div>
+            <div class="right">0314654148</div>
+          </li>
+          <li class="flex items-center justify-between w-full mb-6">
+            <div class="left flex items-center justify-start">
+              <div class="icon mr-2 flex items-center itemIcon">
+                <svg-icon [key]="'companyInfo'"></svg-icon>
+              </div>
+              <div class="title">Lĩnh vực:</div>
+            </div>
+            <div class="right">
+              Tư vấn máy vi tính và quản trị hệ thống máy vi tính
+            </div>
+          </li>
+        </ul>
+      </div>
+    </ng-template>
+  </tgn-no-border-card>
+</div>

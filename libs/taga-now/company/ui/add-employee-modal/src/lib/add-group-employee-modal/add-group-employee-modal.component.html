@@ -1,0 +1,10 @@
+<tgn-modal-layout [svgIcon]="'deleteGr'" [title]="'Tạo nhóm'" [buttonName]="'Chọn'">
+  <ng-template #modalContent>
+    <div class="add-employee mt-6">
+      <ng-container *ngFor="let item of listInput">
+        <tgn-input [title]="item.title" [placeholder]="item.placeholder"></tgn-input>
+      </ng-container>
+      <tgn-checkbox></tgn-checkbox>
+    </div>
+  </ng-template>
+</tgn-modal-layout>

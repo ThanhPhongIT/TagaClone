@@ -1,0 +1,2345 @@
+{
+  "version": 1,
+  "cli": {
+    "analytics": false,
+    "defaultCollection": "@nrwl/angular"
+  },
+  "defaultProject": "taga-now",
+  "schematics": {
+    "@schematics/angular": {
+      "component": {
+        "changeDetection": "OnPush",
+        "skipTests": true
+      },
+      "class": {
+        "skipTests": true
+      },
+      "directive": {
+        "skipTests": true
+      },
+      "guard": {
+        "skipTests": true
+      },
+      "interceptor": {
+        "skipTests": true
+      },
+      "module": {
+        "skipTests": true
+      },
+      "pipe": {
+        "skipTests": true
+      },
+      "service": {
+        "skipTests": true
+      }
+    },
+    "@nrwl/angular": {
+      "application": {
+        "linter": "eslint"
+      },
+      "library": {
+        "linter": "eslint"
+      },
+      "storybook-configuration": {
+        "linter": "eslint"
+      }
+    },
+    "@nrwl/angular:application": {
+      "style": "scss",
+      "linter": "eslint",
+      "unitTestRunner": "jest",
+      "e2eTestRunner": "cypress"
+    },
+    "@nrwl/angular:library": {
+      "style": "scss",
+      "linter": "eslint",
+      "unitTestRunner": "jest",
+      "prefix": "tgn"
+    },
+    "@nrwl/angular:component": {
+      "style": "scss",
+      "changeDetection": "OnPush"
+    }
+  },
+  "projects": {
+    "shared-app-config": {
+      "projectType": "library",
+      "root": "libs/shared/app-config",
+      "sourceRoot": "libs/shared/app-config/src",
+      "prefix": "tgn",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/shared/app-config"],
+          "options": {
+            "jestConfig": "libs/shared/app-config/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/shared/app-config/src/**/*.ts",
+              "libs/shared/app-config/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "shared-assets": {
+      "root": "libs/shared/assets",
+      "sourceRoot": "libs/shared/assets/src",
+      "projectType": "library",
+      "architect": {}
+    },
+    "shared-data-access-api": {
+      "projectType": "library",
+      "root": "libs/shared/data-access/api",
+      "sourceRoot": "libs/shared/data-access/api/src",
+      "prefix": "tgn",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/shared/data-access/api"],
+          "options": {
+            "jestConfig": "libs/shared/data-access/api/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/shared/data-access/api/src/**/*.ts",
+              "libs/shared/data-access/api/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "shared-data-access-models": {
+      "projectType": "library",
+      "root": "libs/shared/data-access/models",
+      "sourceRoot": "libs/shared/data-access/models/src",
+      "prefix": "tgn",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/shared/data-access/models"],
+          "options": {
+            "jestConfig": "libs/shared/data-access/models/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/shared/data-access/models/src/**/*.ts",
+              "libs/shared/data-access/models/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "shared-data-access-store": {
+      "projectType": "library",
+      "root": "libs/shared/data-access/store",
+      "sourceRoot": "libs/shared/data-access/store/src",
+      "prefix": "tgn",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/shared/data-access/store"],
+          "options": {
+            "jestConfig": "libs/shared/data-access/store/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/shared/data-access/store/src/**/*.ts",
+              "libs/shared/data-access/store/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "shared-ui-avatar": {
+      "projectType": "library",
+      "root": "libs/shared/ui/avatar",
+      "sourceRoot": "libs/shared/ui/avatar/src",
+      "prefix": "tgn",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/shared/ui/avatar"],
+          "options": {
+            "jestConfig": "libs/shared/ui/avatar/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/shared/ui/avatar/src/**/*.ts",
+              "libs/shared/ui/avatar/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "shared-ui-avatar-group": {
+      "projectType": "library",
+      "root": "libs/shared/ui/avatar-group",
+      "sourceRoot": "libs/shared/ui/avatar-group/src",
+      "prefix": "tgn",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/shared/ui/avatar-group"],
+          "options": {
+            "jestConfig": "libs/shared/ui/avatar-group/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/shared/ui/avatar-group/src/**/*.ts",
+              "libs/shared/ui/avatar-group/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "shared-ui-base-border-radius": {
+      "projectType": "library",
+      "root": "libs/shared/ui/base-border-radius",
+      "sourceRoot": "libs/shared/ui/base-border-radius/src",
+      "prefix": "tgn",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/shared/ui/base-border-radius/src/**/*.ts",
+              "libs/shared/ui/base-border-radius/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/shared/ui/base-border-radius"],
+          "options": {
+            "jestConfig": "libs/shared/ui/base-border-radius/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "shared-ui-base-card-company": {
+      "projectType": "library",
+      "root": "libs/shared/ui/base-card-company",
+      "sourceRoot": "libs/shared/ui/base-card-company/src",
+      "prefix": "tgn",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/shared/ui/base-card-company/src/**/*.ts",
+              "libs/shared/ui/base-card-company/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/shared/ui/base-card-company"],
+          "options": {
+            "jestConfig": "libs/shared/ui/base-card-company/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "shared-ui-base-card-info": {
+      "projectType": "library",
+      "root": "libs/shared/ui/base-card-info",
+      "sourceRoot": "libs/shared/ui/base-card-info/src",
+      "prefix": "tgn",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/shared/ui/base-card-info/src/**/*.ts",
+              "libs/shared/ui/base-card-info/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/shared/ui/base-card-info"],
+          "options": {
+            "jestConfig": "libs/shared/ui/base-card-info/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "shared-ui-base-tree": {
+      "projectType": "library",
+      "root": "libs/shared/ui/base-tree",
+      "sourceRoot": "libs/shared/ui/base-tree/src",
+      "prefix": "tgn",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/shared/ui/base-tree"],
+          "options": {
+            "jestConfig": "libs/shared/ui/base-tree/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/shared/ui/base-tree/src/**/*.ts",
+              "libs/shared/ui/base-tree/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "shared-ui-boxs-card": {
+      "projectType": "library",
+      "root": "libs/shared/ui/boxs-card",
+      "sourceRoot": "libs/shared/ui/boxs-card/src",
+      "prefix": "tgn",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/shared/ui/boxs-card"],
+          "options": {
+            "jestConfig": "libs/shared/ui/boxs-card/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/shared/ui/boxs-card/src/**/*.ts",
+              "libs/shared/ui/boxs-card/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "shared-ui-button": {
+      "projectType": "library",
+      "root": "libs/shared/ui/button",
+      "sourceRoot": "libs/shared/ui/button/src",
+      "prefix": "tgn",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/shared/ui/button/src/**/*.ts",
+              "libs/shared/ui/button/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/shared/ui/button"],
+          "options": {
+            "jestConfig": "libs/shared/ui/button/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "shared-ui-icon": {
+      "projectType": "library",
+      "root": "libs/shared/ui/icon",
+      "sourceRoot": "libs/shared/ui/icon/src",
+      "prefix": "tgn",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/shared/ui/icon"],
+          "options": {
+            "jestConfig": "libs/shared/ui/icon/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/shared/ui/icon/src/**/*.ts",
+              "libs/shared/ui/icon/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "shared-ui-layout-button": {
+      "projectType": "library",
+      "root": "libs/shared/ui/layout-button",
+      "sourceRoot": "libs/shared/ui/layout-button/src",
+      "prefix": "tgn",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/shared/ui/layout-button/src/**/*.ts",
+              "libs/shared/ui/layout-button/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/shared/ui/layout-button"],
+          "options": {
+            "jestConfig": "libs/shared/ui/layout-button/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "shared-ui-modal-layout": {
+      "projectType": "library",
+      "root": "libs/shared/ui/modal-layout",
+      "sourceRoot": "libs/shared/ui/modal-layout/src",
+      "prefix": "tgn",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/shared/ui/modal-layout/src/**/*.ts",
+              "libs/shared/ui/modal-layout/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/shared/ui/modal-layout"],
+          "options": {
+            "jestConfig": "libs/shared/ui/modal-layout/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "shared-ui-no-border-card": {
+      "projectType": "library",
+      "root": "libs/shared/ui/no-border-card",
+      "sourceRoot": "libs/shared/ui/no-border-card/src",
+      "prefix": "tgn",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/shared/ui/no-border-card"],
+          "options": {
+            "jestConfig": "libs/shared/ui/no-border-card/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/shared/ui/no-border-card/src/**/*.ts",
+              "libs/shared/ui/no-border-card/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "shared-ui-search-input": {
+      "projectType": "library",
+      "root": "libs/shared/ui/search-input",
+      "sourceRoot": "libs/shared/ui/search-input/src",
+      "prefix": "tgn",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/shared/ui/search-input"],
+          "options": {
+            "jestConfig": "libs/shared/ui/search-input/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/shared/ui/search-input/src/**/*.ts",
+              "libs/shared/ui/search-input/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "shared-ui-welcome": {
+      "projectType": "library",
+      "root": "libs/shared/ui/welcome",
+      "sourceRoot": "libs/shared/ui/welcome/src",
+      "prefix": "tgn",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/shared/ui/welcome"],
+          "options": {
+            "jestConfig": "libs/shared/ui/welcome/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/shared/ui/welcome/src/**/*.ts",
+              "libs/shared/ui/welcome/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "taga-now": {
+      "projectType": "application",
+      "root": "apps/taga-now",
+      "sourceRoot": "apps/taga-now/src",
+      "prefix": "tgn",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/apps/taga-now",
+            "index": "apps/taga-now/src/index.html",
+            "main": "apps/taga-now/src/main.ts",
+            "polyfills": "apps/taga-now/src/polyfills.ts",
+            "tsConfig": "apps/taga-now/tsconfig.app.json",
+            "inlineStyleLanguage": "scss",
+            "assets": [
+              "apps/taga-now/src/favicon.ico",
+              "apps/taga-now/src/assets",
+              {
+                "glob": "_redirects",
+                "input": "apps/taga-now/src",
+                "output": "/"
+              },
+              {
+                "glob": "**/*",
+                "input": "libs/shared/assets/src/assets",
+                "output": "assets"
+              },
+              {
+                "glob": "**/*",
+                "input": "./node_modules/@ant-design/icons-angular/src/inline-svg/",
+                "output": "/assets/"
+              },
+              "apps/taga-now/src/manifest.webmanifest"
+            ],
+            "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
+              "apps/taga-now/src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "10mb",
+                  "maximumError": "15000kb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "10000kb",
+                  "maximumError": "5000kb"
+                }
+              ],
+              "fileReplacements": [
+                {
+                  "replace": "apps/taga-now/src/environments/environment.ts",
+                  "with": "apps/taga-now/src/environments/environment.prod.ts"
+                },
+                {
+                  "replace": "libs/taga-now/shell/feature/src/lib/build-specifics/index.ts",
+                  "with": "libs/taga-now/shell/feature/src/lib/build-specifics/index.prod.ts"
+                }
+              ],
+              "outputHashing": "all",
+              "sourceMap": true,
+              "serviceWorker": true,
+              "ngswConfigPath": "apps/taga-now/ngsw-config.json"
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "browserTarget": "taga-now:build:production"
+            },
+            "development": {
+              "browserTarget": "taga-now:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "taga-now:build"
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "apps/taga-now/src/**/*.ts",
+              "apps/taga-now/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/apps/taga-now"],
+          "options": {
+            "jestConfig": "apps/taga-now/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "taga-now-auth-feature": {
+      "projectType": "library",
+      "root": "libs/taga-now/auth/feature",
+      "sourceRoot": "libs/taga-now/auth/feature/src",
+      "prefix": "tgn",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/taga-now/auth/feature"],
+          "options": {
+            "jestConfig": "libs/taga-now/auth/feature/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/taga-now/auth/feature/src/**/*.ts",
+              "libs/taga-now/auth/feature/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "taga-now-auth-ui-forgot-password": {
+      "projectType": "library",
+      "root": "libs/taga-now/auth/ui/forgot-password",
+      "sourceRoot": "libs/taga-now/auth/ui/forgot-password/src",
+      "prefix": "tgn",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/taga-now/auth/ui/forgot-password/src/**/*.ts",
+              "libs/taga-now/auth/ui/forgot-password/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/taga-now/auth/ui/forgot-password"],
+          "options": {
+            "jestConfig": "libs/taga-now/auth/ui/forgot-password/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "taga-now-auth-ui-layout": {
+      "projectType": "library",
+      "root": "libs/taga-now/auth/ui/layout",
+      "sourceRoot": "libs/taga-now/auth/ui/layout/src",
+      "prefix": "tgn",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/taga-now/auth/ui/layout"],
+          "options": {
+            "jestConfig": "libs/taga-now/auth/ui/layout/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/taga-now/auth/ui/layout/src/**/*.ts",
+              "libs/taga-now/auth/ui/layout/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "taga-now-auth-ui-login": {
+      "projectType": "library",
+      "root": "libs/taga-now/auth/ui/login",
+      "sourceRoot": "libs/taga-now/auth/ui/login/src",
+      "prefix": "tgn",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/taga-now/auth/ui/login"],
+          "options": {
+            "jestConfig": "libs/taga-now/auth/ui/login/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/taga-now/auth/ui/login/src/**/*.ts",
+              "libs/taga-now/auth/ui/login/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "taga-now-auth-ui-register": {
+      "projectType": "library",
+      "root": "libs/taga-now/auth/ui/register",
+      "sourceRoot": "libs/taga-now/auth/ui/register/src",
+      "prefix": "tgn",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/taga-now/auth/ui/register"],
+          "options": {
+            "jestConfig": "libs/taga-now/auth/ui/register/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/taga-now/auth/ui/register/src/**/*.ts",
+              "libs/taga-now/auth/ui/register/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "taga-now-company-data-access": {
+      "projectType": "library",
+      "root": "libs/taga-now/company/data-access",
+      "sourceRoot": "libs/taga-now/company/data-access/src",
+      "prefix": "tgn",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/taga-now/company/data-access/src/**/*.ts",
+              "libs/taga-now/company/data-access/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/taga-now/company/data-access"],
+          "options": {
+            "jestConfig": "libs/taga-now/company/data-access/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "taga-now-company-feature-company-document": {
+      "projectType": "library",
+      "root": "libs/taga-now/company/feature/company-document",
+      "sourceRoot": "libs/taga-now/company/feature/company-document/src",
+      "prefix": "tgn",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/taga-now/company/feature/company-document/src/**/*.ts",
+              "libs/taga-now/company/feature/company-document/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/taga-now/company/feature/company-document"
+          ],
+          "options": {
+            "jestConfig": "libs/taga-now/company/feature/company-document/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "taga-now-company-feature-company-employee": {
+      "projectType": "library",
+      "root": "libs/taga-now/company/feature/company-employee",
+      "sourceRoot": "libs/taga-now/company/feature/company-employee/src",
+      "prefix": "tgn",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/taga-now/company/feature/company-employee/src/**/*.ts",
+              "libs/taga-now/company/feature/company-employee/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/taga-now/company/feature/company-employee"
+          ],
+          "options": {
+            "jestConfig": "libs/taga-now/company/feature/company-employee/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "taga-now-company-feature-company-info": {
+      "projectType": "library",
+      "root": "libs/taga-now/company/feature/company-info",
+      "sourceRoot": "libs/taga-now/company/feature/company-info/src",
+      "prefix": "tgn",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/taga-now/company/feature/company-info/src/**/*.ts",
+              "libs/taga-now/company/feature/company-info/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/taga-now/company/feature/company-info"],
+          "options": {
+            "jestConfig": "libs/taga-now/company/feature/company-info/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "taga-now-company-feature-company-project": {
+      "projectType": "library",
+      "root": "libs/taga-now/company/feature/company-project",
+      "sourceRoot": "libs/taga-now/company/feature/company-project/src",
+      "prefix": "tgn",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/taga-now/company/feature/company-project/src/**/*.ts",
+              "libs/taga-now/company/feature/company-project/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/taga-now/company/feature/company-project"],
+          "options": {
+            "jestConfig": "libs/taga-now/company/feature/company-project/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "taga-now-company-feature-shell": {
+      "projectType": "library",
+      "root": "libs/taga-now/company/feature/shell",
+      "sourceRoot": "libs/taga-now/company/feature/shell/src",
+      "prefix": "tgn",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/taga-now/company/feature/shell"],
+          "options": {
+            "jestConfig": "libs/taga-now/company/feature/shell/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/taga-now/company/feature/shell/src/**/*.ts",
+              "libs/taga-now/company/feature/shell/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "taga-now-company-ui-add-employee-modal": {
+      "projectType": "library",
+      "root": "libs/taga-now/company/ui/add-employee-modal",
+      "sourceRoot": "libs/taga-now/company/ui/add-employee-modal/src",
+      "prefix": "tgn",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/taga-now/company/ui/add-employee-modal/src/**/*.ts",
+              "libs/taga-now/company/ui/add-employee-modal/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/taga-now/company/ui/add-employee-modal"],
+          "options": {
+            "jestConfig": "libs/taga-now/company/ui/add-employee-modal/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "taga-now-company-ui-checkbox": {
+      "projectType": "library",
+      "root": "libs/taga-now/company/ui/checkbox",
+      "sourceRoot": "libs/taga-now/company/ui/checkbox/src",
+      "prefix": "tgn",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/taga-now/company/ui/checkbox/src/**/*.ts",
+              "libs/taga-now/company/ui/checkbox/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/taga-now/company/ui/checkbox"],
+          "options": {
+            "jestConfig": "libs/taga-now/company/ui/checkbox/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "taga-now-company-ui-company-side-bar": {
+      "projectType": "library",
+      "root": "libs/taga-now/company/ui/company-side-bar",
+      "sourceRoot": "libs/taga-now/company/ui/company-side-bar/src",
+      "prefix": "tgn",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/taga-now/company/ui/company-side-bar/src/**/*.ts",
+              "libs/taga-now/company/ui/company-side-bar/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/taga-now/company/ui/company-side-bar"],
+          "options": {
+            "jestConfig": "libs/taga-now/company/ui/company-side-bar/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "taga-now-company-ui-document-history": {
+      "projectType": "library",
+      "root": "libs/taga-now/company/ui/document-history",
+      "sourceRoot": "libs/taga-now/company/ui/document-history/src",
+      "prefix": "tgn",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/taga-now/company/ui/document-history/src/**/*.ts",
+              "libs/taga-now/company/ui/document-history/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/taga-now/company/ui/document-history"],
+          "options": {
+            "jestConfig": "libs/taga-now/company/ui/document-history/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "taga-now-company-ui-edit-company-modal": {
+      "projectType": "library",
+      "root": "libs/taga-now/company/ui/edit-company-modal",
+      "sourceRoot": "libs/taga-now/company/ui/edit-company-modal/src",
+      "prefix": "tgn",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/taga-now/company/ui/edit-company-modal/src/**/*.ts",
+              "libs/taga-now/company/ui/edit-company-modal/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/taga-now/company/ui/edit-company-modal"],
+          "options": {
+            "jestConfig": "libs/taga-now/company/ui/edit-company-modal/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "taga-now-company-ui-layout": {
+      "projectType": "library",
+      "root": "libs/taga-now/company/ui/layout",
+      "sourceRoot": "libs/taga-now/company/ui/layout/src",
+      "prefix": "tgn",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/taga-now/company/ui/layout/src/**/*.ts",
+              "libs/taga-now/company/ui/layout/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/taga-now/company/ui/layout"],
+          "options": {
+            "jestConfig": "libs/taga-now/company/ui/layout/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "taga-now-company-ui-list-document": {
+      "projectType": "library",
+      "root": "libs/taga-now/company/ui/list-document",
+      "sourceRoot": "libs/taga-now/company/ui/list-document/src",
+      "prefix": "tgn",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/taga-now/company/ui/list-document/src/**/*.ts",
+              "libs/taga-now/company/ui/list-document/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/taga-now/company/ui/list-document"],
+          "options": {
+            "jestConfig": "libs/taga-now/company/ui/list-document/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "taga-now-company-ui-pick-employee": {
+      "projectType": "library",
+      "root": "libs/taga-now/company/ui/pick-employee",
+      "sourceRoot": "libs/taga-now/company/ui/pick-employee/src",
+      "prefix": "tgn",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/taga-now/company/ui/pick-employee/src/**/*.ts",
+              "libs/taga-now/company/ui/pick-employee/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/taga-now/company/ui/pick-employee"],
+          "options": {
+            "jestConfig": "libs/taga-now/company/ui/pick-employee/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "taga-now-company-ui-related-work": {
+      "projectType": "library",
+      "root": "libs/taga-now/company/ui/related-work",
+      "sourceRoot": "libs/taga-now/company/ui/related-work/src",
+      "prefix": "tgn",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/taga-now/company/ui/related-work/src/**/*.ts",
+              "libs/taga-now/company/ui/related-work/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/taga-now/company/ui/related-work"],
+          "options": {
+            "jestConfig": "libs/taga-now/company/ui/related-work/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "taga-now-company-ui-top-bar": {
+      "projectType": "library",
+      "root": "libs/taga-now/company/ui/top-bar",
+      "sourceRoot": "libs/taga-now/company/ui/top-bar/src",
+      "prefix": "tgn",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/taga-now/company/ui/top-bar/src/**/*.ts",
+              "libs/taga-now/company/ui/top-bar/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/taga-now/company/ui/top-bar"],
+          "options": {
+            "jestConfig": "libs/taga-now/company/ui/top-bar/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "taga-now-document-data-access": {
+      "projectType": "library",
+      "root": "libs/taga-now/document/data-access",
+      "sourceRoot": "libs/taga-now/document/data-access/src",
+      "prefix": "tgn",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/taga-now/document/data-access"],
+          "options": {
+            "jestConfig": "libs/taga-now/document/data-access/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/taga-now/document/data-access/src/**/*.ts",
+              "libs/taga-now/document/data-access/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "taga-now-document-feature-shell": {
+      "projectType": "library",
+      "root": "libs/taga-now/document/feature/shell",
+      "sourceRoot": "libs/taga-now/document/feature/shell/src",
+      "prefix": "tgn",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/taga-now/document/feature/shell"],
+          "options": {
+            "jestConfig": "libs/taga-now/document/feature/shell/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/taga-now/document/feature/shell/src/**/*.ts",
+              "libs/taga-now/document/feature/shell/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "taga-now-e2e": {
+      "root": "apps/taga-now-e2e",
+      "sourceRoot": "apps/taga-now-e2e/src",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/taga-now-e2e/cypress.json",
+            "tsConfig": "apps/taga-now-e2e/tsconfig.e2e.json",
+            "devServerTarget": "taga-now:serve:development"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "taga-now:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["apps/taga-now-e2e/**/*.{js,ts}"]
+          }
+        }
+      }
+    },
+    "taga-now-friends-data-access": {
+      "projectType": "library",
+      "root": "libs/taga-now/friends/data-access",
+      "sourceRoot": "libs/taga-now/friends/data-access/src",
+      "prefix": "tgn",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/taga-now/friends/data-access"],
+          "options": {
+            "jestConfig": "libs/taga-now/friends/data-access/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/taga-now/friends/data-access/src/**/*.ts",
+              "libs/taga-now/friends/data-access/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "taga-now-friends-feature-dashboard": {
+      "projectType": "library",
+      "root": "libs/taga-now/friends/feature/dashboard",
+      "sourceRoot": "libs/taga-now/friends/feature/dashboard/src",
+      "prefix": "tgn",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/taga-now/friends/feature/dashboard/src/**/*.ts",
+              "libs/taga-now/friends/feature/dashboard/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/taga-now/friends/feature/dashboard"],
+          "options": {
+            "jestConfig": "libs/taga-now/friends/feature/dashboard/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "taga-now-friends-feature-detail-profile": {
+      "projectType": "library",
+      "root": "libs/taga-now/friends/feature/detail-profile",
+      "sourceRoot": "libs/taga-now/friends/feature/detail-profile/src",
+      "prefix": "tgn",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/taga-now/friends/feature/detail-profile"],
+          "options": {
+            "jestConfig": "libs/taga-now/friends/feature/detail-profile/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/taga-now/friends/feature/detail-profile/src/**/*.ts",
+              "libs/taga-now/friends/feature/detail-profile/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "taga-now-friends-feature-groups": {
+      "projectType": "library",
+      "root": "libs/taga-now/friends/feature/groups",
+      "sourceRoot": "libs/taga-now/friends/feature/groups/src",
+      "prefix": "tgn",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/taga-now/friends/feature/groups"],
+          "options": {
+            "jestConfig": "libs/taga-now/friends/feature/groups/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/taga-now/friends/feature/groups/src/**/*.ts",
+              "libs/taga-now/friends/feature/groups/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "taga-now-friends-feature-shell": {
+      "projectType": "library",
+      "root": "libs/taga-now/friends/feature/shell",
+      "sourceRoot": "libs/taga-now/friends/feature/shell/src",
+      "prefix": "tgn",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/taga-now/friends/feature/shell"],
+          "options": {
+            "jestConfig": "libs/taga-now/friends/feature/shell/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/taga-now/friends/feature/shell/src/**/*.ts",
+              "libs/taga-now/friends/feature/shell/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "taga-now-friends-ui-context-menu": {
+      "projectType": "library",
+      "root": "libs/taga-now/friends/ui/context-menu",
+      "sourceRoot": "libs/taga-now/friends/ui/context-menu/src",
+      "prefix": "tgn",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/taga-now/friends/ui/context-menu/src/**/*.ts",
+              "libs/taga-now/friends/ui/context-menu/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/taga-now/friends/ui/context-menu"],
+          "options": {
+            "jestConfig": "libs/taga-now/friends/ui/context-menu/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "taga-now-friends-ui-gr-card": {
+      "projectType": "library",
+      "root": "libs/taga-now/friends/ui/gr-card",
+      "sourceRoot": "libs/taga-now/friends/ui/gr-card/src",
+      "prefix": "tgn",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/taga-now/friends/ui/gr-card"],
+          "options": {
+            "jestConfig": "libs/taga-now/friends/ui/gr-card/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/taga-now/friends/ui/gr-card/src/**/*.ts",
+              "libs/taga-now/friends/ui/gr-card/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "taga-now-friends-ui-group-item": {
+      "projectType": "library",
+      "root": "libs/taga-now/friends/ui/group-item",
+      "sourceRoot": "libs/taga-now/friends/ui/group-item/src",
+      "prefix": "tgn",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/taga-now/friends/ui/group-item"],
+          "options": {
+            "jestConfig": "libs/taga-now/friends/ui/group-item/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/taga-now/friends/ui/group-item/src/**/*.ts",
+              "libs/taga-now/friends/ui/group-item/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "taga-now-friends-ui-side-bar": {
+      "projectType": "library",
+      "root": "libs/taga-now/friends/ui/side-bar",
+      "sourceRoot": "libs/taga-now/friends/ui/side-bar/src",
+      "prefix": "tgn",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/taga-now/friends/ui/side-bar/src/**/*.ts",
+              "libs/taga-now/friends/ui/side-bar/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/taga-now/friends/ui/side-bar"],
+          "options": {
+            "jestConfig": "libs/taga-now/friends/ui/side-bar/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "taga-now-friends-ui-tab-bar": {
+      "projectType": "library",
+      "root": "libs/taga-now/friends/ui/tab-bar",
+      "sourceRoot": "libs/taga-now/friends/ui/tab-bar/src",
+      "prefix": "tgn",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/taga-now/friends/ui/tab-bar"],
+          "options": {
+            "jestConfig": "libs/taga-now/friends/ui/tab-bar/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/taga-now/friends/ui/tab-bar/src/**/*.ts",
+              "libs/taga-now/friends/ui/tab-bar/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "taga-now-friends-ui-user-item": {
+      "projectType": "library",
+      "root": "libs/taga-now/friends/ui/user-item",
+      "sourceRoot": "libs/taga-now/friends/ui/user-item/src",
+      "prefix": "tgn",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/taga-now/friends/ui/user-item"],
+          "options": {
+            "jestConfig": "libs/taga-now/friends/ui/user-item/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/taga-now/friends/ui/user-item/src/**/*.ts",
+              "libs/taga-now/friends/ui/user-item/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "taga-now-home-data-access": {
+      "projectType": "library",
+      "root": "libs/taga-now/home/data-access",
+      "sourceRoot": "libs/taga-now/home/data-access/src",
+      "prefix": "tgn",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/taga-now/home/data-access"],
+          "options": {
+            "jestConfig": "libs/taga-now/home/data-access/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/taga-now/home/data-access/src/**/*.ts",
+              "libs/taga-now/home/data-access/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "taga-now-home-feature": {
+      "projectType": "library",
+      "root": "libs/taga-now/home/feature",
+      "sourceRoot": "libs/taga-now/home/feature/src",
+      "prefix": "tgn",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/taga-now/home/feature"],
+          "options": {
+            "jestConfig": "libs/taga-now/home/feature/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/taga-now/home/feature/src/**/*.ts",
+              "libs/taga-now/home/feature/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "taga-now-home-ui-dashboard": {
+      "projectType": "library",
+      "root": "libs/taga-now/home/ui/dashboard",
+      "sourceRoot": "libs/taga-now/home/ui/dashboard/src",
+      "prefix": "tgn",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/taga-now/home/ui/dashboard"],
+          "options": {
+            "jestConfig": "libs/taga-now/home/ui/dashboard/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/taga-now/home/ui/dashboard/src/**/*.ts",
+              "libs/taga-now/home/ui/dashboard/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "taga-now-message-data-access": {
+      "projectType": "library",
+      "root": "libs/taga-now/message/data-access",
+      "sourceRoot": "libs/taga-now/message/data-access/src",
+      "prefix": "tgn",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/taga-now/message/data-access"],
+          "options": {
+            "jestConfig": "libs/taga-now/message/data-access/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/taga-now/message/data-access/src/**/*.ts",
+              "libs/taga-now/message/data-access/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "taga-now-message-feature": {
+      "projectType": "library",
+      "root": "libs/taga-now/message/feature",
+      "sourceRoot": "libs/taga-now/message/feature/src",
+      "prefix": "tgn",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/taga-now/message/feature"],
+          "options": {
+            "jestConfig": "libs/taga-now/message/feature/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/taga-now/message/feature/src/**/*.ts",
+              "libs/taga-now/message/feature/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "taga-now-message-feature-message-content": {
+      "projectType": "library",
+      "root": "libs/taga-now/message/feature/message-content",
+      "sourceRoot": "libs/taga-now/message/feature/message-content/src",
+      "prefix": "tgn",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/taga-now/message/feature/message-content/src/**/*.ts",
+              "libs/taga-now/message/feature/message-content/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/taga-now/message/feature/message-content"],
+          "options": {
+            "jestConfig": "libs/taga-now/message/feature/message-content/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "taga-now-message-feature-shell": {
+      "projectType": "library",
+      "root": "libs/taga-now/message/feature/shell",
+      "sourceRoot": "libs/taga-now/message/feature/shell/src",
+      "prefix": "tgn",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/taga-now/message/feature/shell/src/**/*.ts",
+              "libs/taga-now/message/feature/shell/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/taga-now/message/feature/shell"],
+          "options": {
+            "jestConfig": "libs/taga-now/message/feature/shell/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "taga-now-message-ui-layout": {
+      "projectType": "library",
+      "root": "libs/taga-now/message/ui/layout",
+      "sourceRoot": "libs/taga-now/message/ui/layout/src",
+      "prefix": "tgn",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/taga-now/message/ui/layout/src/**/*.ts",
+              "libs/taga-now/message/ui/layout/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/taga-now/message/ui/layout"],
+          "options": {
+            "jestConfig": "libs/taga-now/message/ui/layout/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "taga-now-message-ui-ms-main-body": {
+      "projectType": "library",
+      "root": "libs/taga-now/message/ui/ms-main-body",
+      "sourceRoot": "libs/taga-now/message/ui/ms-main-body/src",
+      "prefix": "tgn",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/taga-now/message/ui/ms-main-body/src/**/*.ts",
+              "libs/taga-now/message/ui/ms-main-body/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/taga-now/message/ui/ms-main-body"],
+          "options": {
+            "jestConfig": "libs/taga-now/message/ui/ms-main-body/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "taga-now-message-ui-ms-main-header": {
+      "projectType": "library",
+      "root": "libs/taga-now/message/ui/ms-main-header",
+      "sourceRoot": "libs/taga-now/message/ui/ms-main-header/src",
+      "prefix": "tgn",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/taga-now/message/ui/ms-main-header/src/**/*.ts",
+              "libs/taga-now/message/ui/ms-main-header/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/taga-now/message/ui/ms-main-header"],
+          "options": {
+            "jestConfig": "libs/taga-now/message/ui/ms-main-header/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "taga-now-message-ui-ms-sidebar-card": {
+      "projectType": "library",
+      "root": "libs/taga-now/message/ui/ms-sidebar-card",
+      "sourceRoot": "libs/taga-now/message/ui/ms-sidebar-card/src",
+      "prefix": "tgn",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/taga-now/message/ui/ms-sidebar-card/src/**/*.ts",
+              "libs/taga-now/message/ui/ms-sidebar-card/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/taga-now/message/ui/ms-sidebar-card"],
+          "options": {
+            "jestConfig": "libs/taga-now/message/ui/ms-sidebar-card/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "taga-now-message-ui-side-bar-ms": {
+      "projectType": "library",
+      "root": "libs/taga-now/message/ui/side-bar-ms",
+      "sourceRoot": "libs/taga-now/message/ui/side-bar-ms/src",
+      "prefix": "tgn",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/taga-now/message/ui/side-bar-ms/src/**/*.ts",
+              "libs/taga-now/message/ui/side-bar-ms/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/taga-now/message/ui/side-bar-ms"],
+          "options": {
+            "jestConfig": "libs/taga-now/message/ui/side-bar-ms/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "taga-now-shell-feature": {
+      "projectType": "library",
+      "root": "libs/taga-now/shell/feature",
+      "sourceRoot": "libs/taga-now/shell/feature/src",
+      "prefix": "tgn",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/taga-now/shell/feature"],
+          "options": {
+            "jestConfig": "libs/taga-now/shell/feature/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/taga-now/shell/feature/src/**/*.ts",
+              "libs/taga-now/shell/feature/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "taga-now-shell-ui-layout": {
+      "projectType": "library",
+      "root": "libs/taga-now/shell/ui/layout",
+      "sourceRoot": "libs/taga-now/shell/ui/layout/src",
+      "prefix": "tgn",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/taga-now/shell/ui/layout"],
+          "options": {
+            "jestConfig": "libs/taga-now/shell/ui/layout/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/taga-now/shell/ui/layout/src/**/*.ts",
+              "libs/taga-now/shell/ui/layout/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "taga-now-shell-ui-logout-modal": {
+      "projectType": "library",
+      "root": "libs/taga-now/shell/ui/logout-modal",
+      "sourceRoot": "libs/taga-now/shell/ui/logout-modal/src",
+      "prefix": "tgn",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/taga-now/shell/ui/logout-modal/src/**/*.ts",
+              "libs/taga-now/shell/ui/logout-modal/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/taga-now/shell/ui/logout-modal"],
+          "options": {
+            "jestConfig": "libs/taga-now/shell/ui/logout-modal/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "taga-now-shell-ui-main-view": {
+      "projectType": "library",
+      "root": "libs/taga-now/shell/ui/main-view",
+      "sourceRoot": "libs/taga-now/shell/ui/main-view/src",
+      "prefix": "tgn",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/taga-now/shell/ui/main-view"],
+          "options": {
+            "jestConfig": "libs/taga-now/shell/ui/main-view/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/taga-now/shell/ui/main-view/src/**/*.ts",
+              "libs/taga-now/shell/ui/main-view/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "taga-now-shell-ui-nav-bar": {
+      "projectType": "library",
+      "root": "libs/taga-now/shell/ui/nav-bar",
+      "sourceRoot": "libs/taga-now/shell/ui/nav-bar/src",
+      "prefix": "tgn",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/taga-now/shell/ui/nav-bar"],
+          "options": {
+            "jestConfig": "libs/taga-now/shell/ui/nav-bar/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/taga-now/shell/ui/nav-bar/src/**/*.ts",
+              "libs/taga-now/shell/ui/nav-bar/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "taga-now-shell-ui-navigation": {
+      "projectType": "library",
+      "root": "libs/taga-now/shell/ui/navigation",
+      "sourceRoot": "libs/taga-now/shell/ui/navigation/src",
+      "prefix": "tgn",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/taga-now/shell/ui/navigation"],
+          "options": {
+            "jestConfig": "libs/taga-now/shell/ui/navigation/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/taga-now/shell/ui/navigation/src/**/*.ts",
+              "libs/taga-now/shell/ui/navigation/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "taga-now-shell-ui-resizer": {
+      "projectType": "library",
+      "root": "libs/taga-now/shell/ui/resizer",
+      "sourceRoot": "libs/taga-now/shell/ui/resizer/src",
+      "prefix": "tgn",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/taga-now/shell/ui/resizer"],
+          "options": {
+            "jestConfig": "libs/taga-now/shell/ui/resizer/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/taga-now/shell/ui/resizer/src/**/*.ts",
+              "libs/taga-now/shell/ui/resizer/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "taga-now-shell-ui-side-bar": {
+      "projectType": "library",
+      "root": "libs/taga-now/shell/ui/side-bar",
+      "sourceRoot": "libs/taga-now/shell/ui/side-bar/src",
+      "prefix": "tgn",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/taga-now/shell/ui/side-bar"],
+          "options": {
+            "jestConfig": "libs/taga-now/shell/ui/side-bar/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/taga-now/shell/ui/side-bar/src/**/*.ts",
+              "libs/taga-now/shell/ui/side-bar/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "taga-now-shell-ui-top-bar": {
+      "projectType": "library",
+      "root": "libs/taga-now/shell/ui/top-bar",
+      "sourceRoot": "libs/taga-now/shell/ui/top-bar/src",
+      "prefix": "tgn",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/taga-now/shell/ui/top-bar"],
+          "options": {
+            "jestConfig": "libs/taga-now/shell/ui/top-bar/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/taga-now/shell/ui/top-bar/src/**/*.ts",
+              "libs/taga-now/shell/ui/top-bar/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "taga-now-shell-ui-user-dropdown": {
+      "projectType": "library",
+      "root": "libs/taga-now/shell/ui/user-dropdown",
+      "sourceRoot": "libs/taga-now/shell/ui/user-dropdown/src",
+      "prefix": "tgn",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/taga-now/shell/ui/user-dropdown"],
+          "options": {
+            "jestConfig": "libs/taga-now/shell/ui/user-dropdown/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/taga-now/shell/ui/user-dropdown/src/**/*.ts",
+              "libs/taga-now/shell/ui/user-dropdown/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "taga-now-tasks-data-access": {
+      "projectType": "library",
+      "root": "libs/taga-now/tasks/data-access",
+      "sourceRoot": "libs/taga-now/tasks/data-access/src",
+      "prefix": "tgn",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/taga-now/tasks/data-access"],
+          "options": {
+            "jestConfig": "libs/taga-now/tasks/data-access/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/taga-now/tasks/data-access/src/**/*.ts",
+              "libs/taga-now/tasks/data-access/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "taga-now-tasks-feature-shell": {
+      "projectType": "library",
+      "root": "libs/taga-now/tasks/feature/shell",
+      "sourceRoot": "libs/taga-now/tasks/feature/shell/src",
+      "prefix": "tgn",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/taga-now/tasks/feature/shell"],
+          "options": {
+            "jestConfig": "libs/taga-now/tasks/feature/shell/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/taga-now/tasks/feature/shell/src/**/*.ts",
+              "libs/taga-now/tasks/feature/shell/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "taga-now-tasks-ui-dashboard": {
+      "projectType": "library",
+      "root": "libs/taga-now/tasks/ui/dashboard",
+      "sourceRoot": "libs/taga-now/tasks/ui/dashboard/src",
+      "prefix": "tgn",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/taga-now/tasks/ui/dashboard"],
+          "options": {
+            "jestConfig": "libs/taga-now/tasks/ui/dashboard/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/taga-now/tasks/ui/dashboard/src/**/*.ts",
+              "libs/taga-now/tasks/ui/dashboard/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "taga-now-user-data-access": {
+      "projectType": "library",
+      "root": "libs/taga-now/user/data-access",
+      "sourceRoot": "libs/taga-now/user/data-access/src",
+      "prefix": "tgn",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/taga-now/user/data-access"],
+          "options": {
+            "jestConfig": "libs/taga-now/user/data-access/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/taga-now/user/data-access/src/**/*.ts",
+              "libs/taga-now/user/data-access/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "taga-now-user-feature-shell": {
+      "projectType": "library",
+      "root": "libs/taga-now/user/feature/shell",
+      "sourceRoot": "libs/taga-now/user/feature/shell/src",
+      "prefix": "tgn",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/taga-now/user/feature/shell"],
+          "options": {
+            "jestConfig": "libs/taga-now/user/feature/shell/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/taga-now/user/feature/shell/src/**/*.ts",
+              "libs/taga-now/user/feature/shell/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "taga-now-user-ui-activities-personal": {
+      "projectType": "library",
+      "root": "libs/taga-now/user/ui/activities-personal",
+      "sourceRoot": "libs/taga-now/user/ui/activities-personal/src",
+      "prefix": "tgn",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/taga-now/user/ui/activities-personal/src/**/*.ts",
+              "libs/taga-now/user/ui/activities-personal/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/taga-now/user/ui/activities-personal"],
+          "options": {
+            "jestConfig": "libs/taga-now/user/ui/activities-personal/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "taga-now-user-ui-certificate-personal": {
+      "projectType": "library",
+      "root": "libs/taga-now/user/ui/certificate-personal",
+      "sourceRoot": "libs/taga-now/user/ui/certificate-personal/src",
+      "prefix": "tgn",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/taga-now/user/ui/certificate-personal/src/**/*.ts",
+              "libs/taga-now/user/ui/certificate-personal/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/taga-now/user/ui/certificate-personal"],
+          "options": {
+            "jestConfig": "libs/taga-now/user/ui/certificate-personal/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "taga-now-user-ui-contact-personal": {
+      "projectType": "library",
+      "root": "libs/taga-now/user/ui/contact-personal",
+      "sourceRoot": "libs/taga-now/user/ui/contact-personal/src",
+      "prefix": "tgn",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/taga-now/user/ui/contact-personal/src/**/*.ts",
+              "libs/taga-now/user/ui/contact-personal/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/taga-now/user/ui/contact-personal"],
+          "options": {
+            "jestConfig": "libs/taga-now/user/ui/contact-personal/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "taga-now-user-ui-exp-personal": {
+      "projectType": "library",
+      "root": "libs/taga-now/user/ui/exp-personal",
+      "sourceRoot": "libs/taga-now/user/ui/exp-personal/src",
+      "prefix": "tgn",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/taga-now/user/ui/exp-personal/src/**/*.ts",
+              "libs/taga-now/user/ui/exp-personal/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/taga-now/user/ui/exp-personal"],
+          "options": {
+            "jestConfig": "libs/taga-now/user/ui/exp-personal/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "taga-now-user-ui-info-personal": {
+      "projectType": "library",
+      "root": "libs/taga-now/user/ui/info-personal",
+      "sourceRoot": "libs/taga-now/user/ui/info-personal/src",
+      "prefix": "tgn",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/taga-now/user/ui/info-personal/src/**/*.ts",
+              "libs/taga-now/user/ui/info-personal/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/taga-now/user/ui/info-personal"],
+          "options": {
+            "jestConfig": "libs/taga-now/user/ui/info-personal/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "taga-now-user-ui-skill-personal": {
+      "projectType": "library",
+      "root": "libs/taga-now/user/ui/skill-personal",
+      "sourceRoot": "libs/taga-now/user/ui/skill-personal/src",
+      "prefix": "tgn",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/taga-now/user/ui/skill-personal/src/**/*.ts",
+              "libs/taga-now/user/ui/skill-personal/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/taga-now/user/ui/skill-personal"],
+          "options": {
+            "jestConfig": "libs/taga-now/user/ui/skill-personal/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    }
+  }
+}

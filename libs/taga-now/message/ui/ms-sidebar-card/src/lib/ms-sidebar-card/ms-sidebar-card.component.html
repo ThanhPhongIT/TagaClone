@@ -1,0 +1,179 @@
+<div class="row">
+    <div class="col-md-3">
+        <div class="contact-box">
+            <div class="contact">
+                <img alt="image" class="img-circle" src="https://bootdey.com/img/Content/avatar/avatar1.png">
+                <h3 class="m-b-xs"><strong>John Smith</strong></h3>
+
+            </div>
+            <div class="card">
+                <nz-collapse nzAccordion [nzBordered]="false" [nzExpandIconPosition]="position">
+                    <ng-container *ngFor="let panel of panels">
+                        <nz-collapse-panel [nzHeader]="panel.name" [nzActive]="panel.active"
+                            *ngIf="panel.type === 'image'" [ngStyle]="panel.customStyle">
+                            <nz-list nzItemLayout="vertical" [nzLoading]="loading">
+                                <nz-list-item class="p-0 border-none">
+                                    <div class="list-item">
+                                        <div class="row">
+                                            <div class="img-file"><img src="assets/message/file.svg" alt=""></div>
+                                            <div class="img-file"><img src="assets/message/file.svg" alt=""></div>
+                                            <div class="img-file"><img src="assets/message/file.svg" alt=""></div>
+                                        </div>
+                                        <div class="button-a">
+                                            <button>Xem tất cả</button>
+                                        </div>
+                                    </div>
+                                </nz-list-item>
+                            </nz-list>
+                        </nz-collapse-panel>
+                        <nz-collapse-panel [nzHeader]="panel.name" [nzActive]="panel.active"
+                            *ngIf="panel.type === 'customer'" [ngStyle]="panel.customStyle">
+                            <nz-list nzItemLayout="vertical" [nzLoading]="loading">
+                                <nz-list-item class="p-0 border-none" style="display: block;">
+                                    <div class="wrapper">
+                                        <div class="member-type">
+                                            <img src="assets/message/avt-group-icon.svg" alt="">
+                                            <span>5 thành viên</span>
+                                        </div>
+                                        <div class="member">
+                                            <a class="icon " style="z-index: 0;"
+                                                style="background-image: url('assets/message/avt-qa.svg');">
+                                            </a>
+                                            <a class="icon " style="z-index: 1;"
+                                                style="background-image: url('assets/message/avt-qa.svg');">
+                                            </a>
+                                            <a class="icon " style="z-index: 2;"
+                                                style="background-image: url('assets/message/avt-qa.svg');">
+                                            </a>
+                                            <a class="icon " style="z-index: 3;"
+                                                style="background-image: url('assets/message/avt-qa.svg');">
+                                            </a>
+                                            <a class="icon " style="z-index: 4;"
+                                                style="background-image: url('assets/message/avt-qa.svg');">
+                                            </a>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="item-1">
+                                        <div class="item-2">
+                                            <img src="assets/message/avt-qa.svg" alt="">
+                                        </div>
+                                        <div class="item-title">
+                                            <div class="text">
+                                                <div class="title-header">Trần Quang Anh</div>
+                                                <div class="title-content">Thành viên
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="remove">
+                                            <img src="assets/message/avt-group-remove.svg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="item-1">
+                                        <div class="item-2">
+                                            <img src="assets/message/avt-qa.svg" alt="">
+                                        </div>
+                                        <div class="item-title">
+                                            <div class="text">
+                                                <div class="title-header">Trần Quang Anh</div>
+                                                <div class="title-content">Thành viên
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="remove">
+                                            <img src="assets/message/avt-group-remove.svg" alt="">
+                                        </div>
+                                    </div>
+                                </nz-list-item>
+                            </nz-list>
+                        </nz-collapse-panel>
+                        <nz-collapse-panel [nzHeader]="panel.name" [nzActive]="panel.active" *ngIf="panel.type === 'file'"
+                            [ngStyle]="panel.customStyle">
+                            <nz-list nzItemLayout="vertical" [nzLoading]="loading">
+                                <nz-list-item class="p-0 border-none">
+                                    <div class="list-item">
+                                        <div class="row">
+                                            <div class="img-file2"><img src="assets/message/pdf-icon.svg" alt=""></div>
+                                            <span>Áo dài tay Taganow</span>
+                                            <!-- <div class="img-file"><img src="assets/message/file.svg" alt=""></div>
+                                            <div class="img-file"><img src="assets/message/file.svg" alt=""></div>
+                                            <div class="img-file"><img src="assets/message/file.svg" alt=""></div> -->
+                                        </div>
+                                        <div class="button-a">
+                                            <button>Xem tất cả</button>
+                                        </div>
+                                    </div>
+                                </nz-list-item>
+                            </nz-list>
+                        </nz-collapse-panel>
+                        <nz-collapse-panel [nzHeader]="panel.name" [nzActive]="panel.active" *ngIf="panel.type === 'other'"
+                            [ngStyle]="panel.customStyle">
+                            <nz-list nzItemLayout="vertical" [nzLoading]="loading">
+                                <nz-list-item class="p-0 border-none">
+                                    <div class="list-item">
+                                        <div class="button-a delete-button">
+                                            <button>Xóa lịch sử trò chuyện</button>
+                                        </div>
+                                        <div class="button-a remove-button">
+                                            <button>Rời khỏi nhóm</button>
+                                        </div>
+                                    </div>
+                                </nz-list-item>
+                            </nz-list>
+                        </nz-collapse-panel>
+                    </ng-container>
+                </nz-collapse>
+            </div>
+            <!-- <div class="contact-box-footer">
+                <div class="m-t-xs btn-group">
+                    <a class="btn btn-xs btn-white"><i class="fa fa-phone"></i> Call </a>
+                    <a class="btn btn-xs btn-white"><i class="fa fa-envelope"></i> Email</a>
+                    <a class="btn btn-xs btn-white"><i class="fa fa-user-plus"></i> Follow</a>
+                </div>
+            </div> -->
+            <div></div>
+
+        </div>
+    </div>
+</div>
+<!-- <nz-collapse nzGhost
+             [nzExpandIconPosition]="'right'">
+    <ng-container *ngrxLet="companies$ as companies">
+        <nz-collapse-panel *ngFor="let panel of companies"
+                           [nzHeader]="expandIcon"
+                           nzExpandedIcon>
+            <ng-template #expandIcon>
+                <div class="grid grid-cols-4 gap-2">
+                    <img class="img_logo col-span-1 self-center"
+                         [src]="panel.MediaURL || 'assets/logoCi.png'"
+                         alt="">
+                    <p class="col-span-3 text-xs font-medium self-center">{{panel.Name}}</p>
+                </div>
+            </ng-template>
+            <ul class="menu_company"
+                nz-menu
+                [nzMode]="'vertical'">
+                <li nz-menu-item
+                    [nzMatchRouter]="true"
+                    [nzMatchRouterExact]="true"
+                    [routerLink]="['/company', 'info', panel.CompanyId]">Thông tin tổ chức</li>
+                <li nz-menu-item
+                    [nzMatchRouter]="true"
+                    [nzMatchRouterExact]="true"
+                    [routerLink]="['/company', 'employee', panel.CompanyId ]">Nhân sự</li>
+                <li nz-menu-item
+                    [nzMatchRouter]="true"
+                    [nzMatchRouterExact]="true"
+                    [routerLink]="['/company', 'project', panel.CompanyId]">Công việc</li>
+                <li nz-menu-item
+                    [nzMatchRouter]="true"
+                    [nzMatchRouterExact]="true"
+                    [routerLink]="['/company', 'document', panel.CompanyId ]">Danh mục tài liệu</li>
+            </ul>
+        </nz-collapse-panel>
+    </ng-container>
+
+</nz-collapse> -->

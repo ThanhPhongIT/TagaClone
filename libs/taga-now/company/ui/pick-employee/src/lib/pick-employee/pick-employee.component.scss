@@ -1,0 +1,13 @@
+.item {
+    border-radius: 18px;
+    white-space: nowrap;
+    @apply px-2 py-1 bg-backgroundButtonGray mr-2;
+    .name {
+        @apply text-xs px-1;
+    }
+}
+.pick-emloyee {
+    .main {
+        min-height: 51px;
+    }
+}

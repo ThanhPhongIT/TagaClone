@@ -1,0 +1,13 @@
+ul {
+  background: none;
+  border-bottom: 1px solid #d9d9d9;
+  @apply py-3;
+  li {
+    text-align: center;
+    background-color: transparent;
+    &:hover {
+      color: rgb(51, 102, 204);
+    }
+    @apply w-40 xl:w-lg 2xl:w-56 col-span-2 text-xs font-medium;
+  }
+}

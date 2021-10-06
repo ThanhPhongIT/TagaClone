@@ -1,0 +1,32 @@
+<tgn-layout-button [listButton]="listButton" (callBack)="showModal($event)">
+  <ng-template #layoutButtonContent>
+    <div class="group-friend">
+      <div class="list">
+        <tgn-group-item
+          [grName]="'Danh sách nhân sự'"
+          [listItem]="listFriend1"
+          [haveGroup]="false"
+        ></tgn-group-item>
+      </div>
+      <div class="list">
+        <tgn-group-item
+          [grName]="'Thiết kế'"
+          [listItem]="listFriend1"
+        ></tgn-group-item>
+      </div>
+      <div class="list">
+        <tgn-group-item
+          [grName]="'Back-End'"
+          [listItem]="listFriend2"
+        ></tgn-group-item>
+      </div>
+      <div class="related-work-component">
+        <tgn-related-work></tgn-related-work>
+      </div>
+    </div>
+
+    <ng-template #welcome>
+      <tgn-welcome></tgn-welcome>
+    </ng-template>
+  </ng-template>
+</tgn-layout-button>

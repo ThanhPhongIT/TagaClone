@@ -1,0 +1,86 @@
+<ng-container *ngrxLet="currentUser$ as user">
+	<img class="banner-profile"
+		 src="assets/banner-profile.png"
+		 alt="">
+	<div class="avatar flex flex-row items-center">
+		<tgn-avatar [avatarSrc]="user.MediaURL"
+					[avtSize]="226"></tgn-avatar>
+		<div class="infor">
+			<div class="name text-black font-semibold text-2xl mb-2">
+				{{user.FirstName}} {{user.LastName}}
+			</div>
+			<div class="text-gray-500 font-medium text-base">
+				Back-End Dev tại Consult Indochina
+			</div>
+		</div>
+	</div>
+
+	<div class="content grid grid-cols-12 gap-6 p-5">
+		<div class="col-span-8">
+			<tgn-no-border-card>
+				<ng-template #cardContent>
+					<tgn-info-personal [userDetail]="user"></tgn-info-personal>
+					<div class="bdc"></div>
+					<tgn-contact-personal [userDetail]="user"></tgn-contact-personal>
+				</ng-template>
+			</tgn-no-border-card>
+			<tgn-no-border-card>
+				<ng-template #cardContent>
+					<div class="introduce">
+						<div class="head flex items-center justify-between mb-6">
+							<div class="title  font-semibold text-base">
+								Giới thiệu
+							</div>
+							<svg-icon [key]="'fix'"></svg-icon>
+						</div>
+
+						<div class="content">
+							Hi, i'm Quang Anh, i'm a senior UX-UI designer of every aspect of business. I have been
+							working
+							in
+							this filed more than 2 years with 10+ web apps, phone apps and landing pages. With the
+							diffirent
+							perspective of an architectural graduate. I aim for a clean, unique and sophisticated design
+							Beside
+							UX-UI, i'm also working on Brand identity, video animation, 3D illustration.
+						</div>
+					</div>
+				</ng-template>
+			</tgn-no-border-card>
+			<tgn-no-border-card>
+				<ng-template #cardContent>
+					<tgn-exp-personal></tgn-exp-personal>
+					<div class="bdc"></div>
+					<tgn-activities-personal></tgn-activities-personal>
+				</ng-template>
+			</tgn-no-border-card>
+			<tgn-no-border-card>
+				<ng-template #cardContent>
+					<tgn-certificate-personal></tgn-certificate-personal>
+				</ng-template>
+			</tgn-no-border-card>
+			<tgn-no-border-card>
+				<ng-template #cardContent>
+					<tgn-skill-personal></tgn-skill-personal>
+				</ng-template>
+			</tgn-no-border-card>
+		</div>
+		<div class="col-span-4 relative">
+			<div class="button-user">
+				<tgn-button [width]="'154px'" [type]="1" class="mr-3">
+					Bạn bè
+					<svg-icon [key]="'dropDown'" class="ml-3"></svg-icon>
+				</tgn-button>
+				<tgn-button [width]="'154px'" [type]="3">
+					Nhắn tin
+				</tgn-button>
+			</div>
+			<p class="title-right">Đang làm việc tại:</p>
+			<tgn-no-border-card>
+				<ng-template #cardContent>
+					<tgn-base-card-company></tgn-base-card-company>
+				</ng-template>
+			</tgn-no-border-card>
+		</div>
+	</div>
+</ng-container>

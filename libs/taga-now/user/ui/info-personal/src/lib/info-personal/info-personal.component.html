@@ -1,0 +1,45 @@
+<div class="personal">
+  <div
+    class="heading flex items-center justify-between mb-7 font-semibold text-base"
+  >
+    <div class="title">Thông tin cá nhân</div>
+    <div class="setting">
+      <svg-icon [key]="'fix'"></svg-icon>
+    </div>
+  </div>
+  <ul class="list w-full">
+    <li class="flex items-center justify-between w-full mb-6">
+      <div class="left flex items-center justify-start">
+        <div class="icon mr-2 flex items-center">
+          <svg-icon [key]="'location'"></svg-icon>
+        </div>
+        <div class="title">Đang sống tại:</div>
+      </div>
+      <div class="right">
+        {{ userDetail?.FirstName }}
+      </div>
+    </li>
+    <li class="flex items-center justify-between w-full mb-6">
+      <div class="left flex items-center justify-start">
+        <div class="icon mr-2 flex items-center">
+          <svg-icon [key]="'department'"></svg-icon>
+        </div>
+        <div class="title">Lĩnh vực làm việc:</div>
+      </div>
+      <div class="right">
+        {{ userDetail?.FirstName }}
+      </div>
+    </li>
+    <li class="flex items-center justify-between w-full mb-6">
+      <div class="left flex items-center justify-start">
+        <div class="icon mr-2 flex items-center itemIcon">
+          <svg-icon [key]="'package'"></svg-icon>
+        </div>
+        <div class="title">Đang làm việc tại:</div>
+      </div>
+      <div class="right">
+        {{ userDetail?.FirstName }}
+      </div>
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,51 @@
+<tgn-boxs-card>
+  <ng-template #friendsCard>
+    <div class="gr-card" [class]="backgroundActive ? 'bg-blue' : ''">
+      <div class="card-content">
+        <nz-avatar
+          class="rounded-full"
+          nzIcon="user"
+          [nzSize]="65"
+          style="background-color: #679bd8"
+        ></nz-avatar>
+        <div class="info">
+          <p class="name">{{ data?.name }}</p>
+          <p class="position">{{ data?.position }}</p>
+          <p class="project">Dự án: {{ data?.project }}</p>
+        </div>
+      </div>
+      <div class="card-button" *ngIf="isFriend">
+        <tgn-button [width]="'100%'" [type]="2" [style.width]="'100%'"
+          >Nhắn tin</tgn-button
+        >
+      </div>
+      <div class="card-button" *ngIf="!isFriend">
+        <tgn-button [width]="'100%'" [type]="1" class="w-2/5"
+          >Kết bạn</tgn-button
+        >
+        <tgn-button [width]="'100%'" [type]="2" class="w-2/5"
+          >Nhắn tin</tgn-button
+        >
+      </div>
+      <div class="show-more" [class.active-dot]="backgroundActive">
+        <svg-icon
+          [key]="'dotMore'"
+          (click)="openContextMenu($event)"
+        ></svg-icon>
+      </div>
+    </div>
+  </ng-template>
+</tgn-boxs-card>
+<!-- <nz-dropdown-menu #menu="nzDropdownMenu" nzPlacement="topCenter">
+  <ul nz-menu class="menu-dropdown">
+    <li nz-menu-item>
+      <svg-icon [key]="'delete'"></svg-icon> Xóa khỏi tổ chức
+    </li>
+    <li nz-menu-item><svg-icon [key]="'deleteGr'"></svg-icon>Xóa khỏi nhóm</li>
+    <li nz-menu-item><svg-icon [key]="'moveGr'"></svg-icon>Chuyển nhóm</li>
+    <li nz-menu-item>
+      <svg-icon [key]="'keyGr'"></svg-icon>Hủy quyền chuyển nhóm
+    </li>
+  </ul>
+</nz-dropdown-menu> -->
+<!-- <button (click)="backgroundActive = !backgroundActive">dsads</button> -->

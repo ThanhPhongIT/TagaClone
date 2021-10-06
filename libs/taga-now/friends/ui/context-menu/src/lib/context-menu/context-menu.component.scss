@@ -1,0 +1,59 @@
+.context-menu {
+    padding: 16px 26px;
+    box-shadow: 0px 0px 8px 2px rgb(0 0 0 / 8%), 0px 0px 0px 0px rgb(23 23 23/ 0.06);
+    border-radius: 16px;
+    z-index: 9;
+    width: 300px;
+    @apply bg-white;
+    li {
+        border-bottom: 0.5px solid #d9d9d9;
+        @apply py-3 flex items-center cursor-pointer relative;
+        &:hover {
+            @apply text-primary;
+        }
+        &:last-child {
+            border: none;
+        }
+        svg-icon {
+            @apply mr-2;
+        }
+        .sub-menu {
+            top: -1rem;
+            right: -320px;
+            box-shadow: 0px 0px 8px 2px rgb(0 0 0 / 8%), 0px 0px 0px 0px rgb(23 23 23/ 0.06);
+            border-radius: 16px;
+            padding: 16px 26px;
+            @apply absolute bg-white cursor-auto opacity-0 duration-500 delay-200;
+            &::after {
+                width: 0;
+                height: 0;
+                border-top: 10px solid transparent;
+                border-bottom: 10px solid transparent;
+                border-right: 10px solid white;
+                content: "";
+                left: -10px;
+                top: 37px;
+                position: absolute;
+            }
+            .li-first-sub {
+                @apply border-none -ml-2;
+            }
+            li {
+                width: 230px;
+                @apply cursor-auto;
+            }
+        }
+    }
+    .li-sub {
+        &:hover {
+            .sub-menu {
+                @apply opacity-100 duration-500;
+            }
+        }
+    }
+}
+[nz-radio] {
+    display: block;
+    height: 32px;
+    line-height: 32px;
+}
